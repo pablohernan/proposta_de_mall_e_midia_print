@@ -1,0 +1,4788 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous" -->
+    <link rel="stylesheet" media="all" href="https://app.pipefy.com/apps/stylea.css" />
+    <!--link rel="stylesheet" media="all" href="./css/style.css?154s57" />
+    <link rel="stylesheet" media="all" href="./css/tabs.css?4ak" />
+    <link rel="stylesheet" media="all" href="./css/collapse.css?4ak" />
+    <link rel="stylesheet" media="all" href="./css/table.css?1" /-->
+
+  <style>
+      #list {
+        padding-top: 14px;
+        padding-bottom: 10px;
+      }
+      #list a {
+        display:block;
+        padding: 10px;
+      }
+      .table_100{
+        width: 100%;
+      }
+      #container{ 
+        width: 900px; 
+        margin-left: 70px; 
+        height: 100%;
+      }
+      .container_scroll{
+        width: 94% !important; 
+        overflow-y: scroll;
+      }
+      td{
+        border-right: 5px solid white;
+      }
+      .td_49{ width: 49%; }
+      .pp-collapse-title{
+        font-size: 16px;
+        margin-top: 80px;
+      }
+      .padding_20px{
+        font-size: 38px;
+      }
+      .pp-input{
+        background-color: #eeecea;
+      }
+
+      .hidden{ display: none }
+
+      #btnSalvar{width: 100px;}
+
+
+
+    </style>
+  </head>
+  <body class="pp-theme-pipefy">
+
+ <div id="container" class="container_scroll">
+
+        <div id="load" class="loadBox"  style="display:none"o>
+            <span class="docs-boxes-link doc-box-3 pp-ico-loading"></span>
+        </div>
+
+        <div id="list" class="scroll-wrapper">
+<br>
+
+<table>
+  <tr>
+    <td width="200"><img src="./images/logo.jpg" width="120px"></td>
+    <td><h5 class="padding_20px"><b>Proposta de Locação</b></h5></td>
+  </tr>
+</table>
+<br>
+<hr/>
+<br><br>
+          <div class="pp-simple-box pp-bg-white">
+             <section>
+
+<table class="table_100">   
+  <tr>
+    <td colspan="3">
+      <input type="hidden" class="money" id="DADOS_GERAIS.SHOPPING" name="DADOS_GERAIS.SHOPPING" value="" titleentradas="DADOS_GERAIS.SHOPPING">
+    
+                <table class="table_100 table_3td">
+                  <tbody>
+                  <tr>
+                    <td class="td_49">
+
+<!-- nmeEmpreendimentoOcorrencia --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">EMPREENDIMENTO DA OCORRÊNCIA</b>   
+<input id="nmeEmpreendimentoOcorrencia" name="nmeEmpreendimentoOcorrencia"     
+type="text" tabindex="0" class="pp-input save" value="PARTAGE">  
+</label>  
+
+                    </td>
+                    <td class="td_separador"></td>
+                    <td>
+<!-- DADOS_GERAIS.TIPO_NEGOCIACAO --> 
+<label class="pp-input-wrap required">  
+<b class="pp-label-text">TIPO DE NEGOCIAÇÃO</b>  
+<div class="pp-custom-select">  
+<select id="DADOS_GERAIS.TIPO_NEGOCIACAO" name="DADOS_GERAIS.TIPO_NEGOCIACAO"   
+tabindex="0" class="pp-select save" onchange="selecionaTipoNegociacao(this.value)">  
+      <option value="CONVENCIONAL">Convencional</option>
+      <option value="POP_UP">Pop-Up</option>
+      <option value="OUTROS">Outros</option>
+</select>  
+</div>  
+</label>  
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+<!-- DADOS_GERAIS.NUM_OCORRENCIA --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">NÚMERO DA OCORRÊNCIA</b>   
+<input id="DADOS_GERAIS.NUM_OCORRENCIA" name="DADOS_GERAIS.NUM_OCORRENCIA"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                    </td>
+                    <td class="td_separador"></td>
+                    <td>
+<!-- DADOS_GERAIS.EXISTE_MIDIA --> 
+<label class="pp-input-wrap required">  
+<b class="pp-label-text">EXISTE MÍDIA?</b>  
+<div class="pp-custom-select">  
+<select id="DADOS_GERAIS.EXISTE_MIDIA" name="DADOS_GERAIS.EXISTE_MIDIA"   
+tabindex="0" class="pp-select save"> 
+      <option value="">:: SELECIONAR ::</option>
+      <option value="SIM">Sim</option>
+      <option value="NAO">Não</option> 
+</select>  
+</div>  
+</label>
+
+                    </td>
+                  </tr>     
+                  </tbody>
+                </table>      
+
+
+<!-- DADOS GERAIS -->
+                <div class="">
+                    <div class="pp-collapse pp-collapse-closed"><a href="#" class="pp-collapse-header" title="Default Collapse" tabindex="0"><h3 class="pp-collapse-title">DADOS GERAIS</h3></a>
+                        <div class="pp-collapse-body">
+
+                          <div class="tabs" >
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" >SITUAÇÃO ANTERIOR</a></li>
+                              </ul>
+                              <!-- SITUAÇÃO ANTERIOR -->
+                              <div class="tab">
+                                
+
+                                  <table class="table_100 table_3td">   
+                                    <tbody><tr>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_MARCA --> 
+<label class="pp-input-wrap required">  
+<b class="pp-label-text">MARCA</b>  
+<div class="pp-custom-select">  
+<select id="DADOS_GERAIS.SITUACAOANTERIOR_MARCA" 
+name="DADOS_GERAIS.SITUACAOANTERIOR_MARCA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td class="td_separador"></td>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_FANTASIA --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">FANTASIA</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_FANTASIA" 
+name="DADOS_GERAIS.SITUACAOANTERIOR_FANTASIA"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_SUC_N --> 
+<label class="pp-input-wrap">
+<b class="pp-label-text">SUC Nº</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_SUC_N" 
+name="DADOS_GERAIS.SITUACAOANTERIOR_SUC_N"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_ABL_M2 --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ABL (m2)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_ABL_M2" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_ABL_M2"  onKeyUp="calcularDadosGerais()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_ALUGUEL_PERC --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ALUGUEL %</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_ALUGUEL_PERC" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_ALUGUEL_PERC"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_FPP --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">FPP</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_FPP" name="DADOS_GERAIS.SITUACAOANTERIOR_FPP"    
+
+ 
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_SEGMENTO --> 
+<label class="pp-input-wrap required">  
+<b class="pp-label-text">SEGMENTO</b>  
+<div class="pp-custom-select">  
+<select id="DADOS_GERAIS.SITUACAOANTERIOR_SEGMENTO" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_SEGMENTO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>              
+
+                              
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_AMM_MEDIO_R --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">AMM MÉDIO (R$)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_AMM_MEDIO_R" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_AMM_MEDIO_R"  onKeyUp="
+calcularDadosGerais();calcularDadosTipoNegociacao();
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_UTIMO_AMM_R_M2 --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ÚLTIMO AMM (R$)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_UTIMO_AMM_R_M2" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_UTIMO_AMM_R_M2"  onKeyUp="
+calcularDadosGerais();calcularDadosTipoNegociacao();
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_AMM_R --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">AMM (R$/M2)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_AMM_R" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_AMM_R"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>                                                           
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_AMM_R --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">DÍVIDA AMM (R$)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_AMM_R" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_AMM_R"  onKeyUp="calcularDadosGerais()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                
+                                      </td>
+                                      <td class="td_separador"></td>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_CONDOMINIO_R --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">DÍVIDA CONDOMÍNIO (R$)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_CONDOMINIO_R" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_CONDOMINIO_R"  onKeyUp="
+calcularDadosGerais()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_FPP_R --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">DÍVIDA FPP (R$)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_FPP_R" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_FPP_R"  onKeyUp="calcularDadosGerais()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_TOTAL_R --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">DÍVIDA TOTAL (R$)</b>   
+<input id="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_TOTAL_R" 
+
+name="DADOS_GERAIS.SITUACAOANTERIOR_DIVIDA_TOTAL_R"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>                                                                   
+                                  </tbody></table>
+
+
+                              </div>
+                              <!-- MÉDIA -->
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" >MÉDIA</a></li>
+                              </ul>                             
+                              <div class="tab">
+                                
+                                  <table class="table_100">
+                                    <tbody>
+                                    <tr>
+                                      <td>
+                                        <!-- MEDIA DO SEGMENTO -->
+                                        <table class="table_100 table_3td"> 
+                                          <tbody><tr><td>MÉDIA DO SEGMENTO</td></tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORSEGMENTO_SEGMENTO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">SEGMENTO</b>   
+<input id="DADOS_GERAIS.MEDIAPORSEGMENTO_SEGMENTO" 
+
+name="DADOS_GERAIS.MEDIAPORSEGMENTO_SEGMENTO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORSEGMENTO_ABL --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ABL</b>   
+<input id="DADOS_GERAIS.MEDIAPORSEGMENTO_ABL" name="DADOS_GERAIS.MEDIAPORSEGMENTO_ABL"    
+
+ 
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORSEGMENTO_AMM_MEDIO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">AMM MÉDIO</b>   
+<input id="DADOS_GERAIS.MEDIAPORSEGMENTO_AMM_MEDIO" 
+
+name="DADOS_GERAIS.MEDIAPORSEGMENTO_AMM_MEDIO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORSEGMENTO_A_PERC --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">A%</b>   
+<input id="DADOS_GERAIS.MEDIAPORSEGMENTO_A_PERC" 
+
+name="DADOS_GERAIS.MEDIAPORSEGMENTO_A_PERC"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORSEGMENTO_PRAZO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">PRAZO (meses)</b>   
+<input id="DADOS_GERAIS.MEDIAPORSEGMENTO_PRAZO" 
+
+name="DADOS_GERAIS.MEDIAPORSEGMENTO_PRAZO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                            </td>
+                                          </tr>
+                                        </tbody></table>  
+
+                                        <!-- FIM MEDIA DO SEGMENTO -->
+                                      </td>
+                                      <td class="td_separador"></td>
+                                      <td>
+                                        <!-- MEDIA POR MARCA -->  
+
+                                        <table class="table_100 table_3td"> 
+                                          <tbody><tr><td>MÉDIA POR MARCA</td></tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORMARCA_MARCA --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">MARCA</b>   
+<input id="DADOS_GERAIS.MEDIAPORMARCA_MARCA" name="DADOS_GERAIS.MEDIAPORMARCA_MARCA"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORMARCA_ABL --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ABL</b>   
+<input id="DADOS_GERAIS.MEDIAPORMARCA_ABL" name="DADOS_GERAIS.MEDIAPORMARCA_ABL"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORMARCA_AMM_MEDIO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">AMM MÉDIO</b>   
+<input id="DADOS_GERAIS.MEDIAPORMARCA_AMM_MEDIO" 
+
+name="DADOS_GERAIS.MEDIAPORMARCA_AMM_MEDIO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORMARCA_A_PERC --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">A%</b>   
+<input id="DADOS_GERAIS.MEDIAPORMARCA_A_PERC" name="DADOS_GERAIS.MEDIAPORMARCA_A_PERC"    
+
+ 
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+<!-- DADOS_GERAIS.MEDIAPORMARCA_PRAZO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">PRAZO (meses)</b>   
+<input id="DADOS_GERAIS.MEDIAPORMARCA_PRAZO" name="DADOS_GERAIS.MEDIAPORMARCA_PRAZO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                            </td>
+                                          </tr>
+                                        </tbody></table>  
+
+                                        <!-- FIM MEDIA POR MARCA -->
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+
+                              </div>
+                              <!-- PROPOSTA COMERCIAL -->
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" >PROPOSTA COMERCIAL</a></li>
+                              </ul>                             
+                              <div class="tab">
+                                
+                                  <table class="table_100 table_3td">
+                                    <tbody><tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_MARCA --> 
+<label class="pp-input-wrap required">  
+<b class="pp-label-text">MARCA</b>  
+<div class="pp-custom-select">  
+<select id="DADOS_GERAIS.PROPOSTACOMERCIAL_MARCA" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_MARCA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                      </td>
+                                      <td class="td_separador"></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_FANTASIA --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">FANTASIA</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_FANTASIA" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_FANTASIA"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_SUC_N --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">SUC Nº</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_SUC_N" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_SUC_N"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_RAZAOSOCIAL --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">RAZÃO SOCIAL</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_RAZAOSOCIAL" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_RAZAOSOCIAL"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+                                    
+                                      </td>
+                                    </tr>   
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_SEGMENTO --> 
+<label class="pp-input-wrap required">  
+<b class="pp-label-text">SEGMENTO</b>  
+<div class="pp-custom-select">  
+<select id="DADOS_GERAIS.PROPOSTACOMERCIAL_SEGMENTO" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_SEGMENTO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>              
+
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_CNPJ --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">CPF / CNPJ</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_CNPJ" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_CNPJ"   onBlur="function onblur(event) {
+this.className='nofocus';validaCampoCpfCnpj(this);
+}"    
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_ALUGUEL_PERC --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ALUGUEL %</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_ALUGUEL_PERC" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_ALUGUEL_PERC"  onKeyUp="calcularDadosTipoNegociacao();"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                        
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_ABL --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ABL (m2)</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_ABL" name="DADOS_GERAIS.PROPOSTACOMERCIAL_ABL"  
+
+onKeyUp="
+calculaCRD();calcularDadosTipoNegociacao();
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_PRAZO_MESES --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">PRAZO (meses)</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_PRAZO_MESES" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_PRAZO_MESES"  onKeyUp="controlaDadosCalculadosPrazo();"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                                        
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_FPP --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">FPP</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_FPP" name="DADOS_GERAIS.PROPOSTACOMERCIAL_FPP"  
+
+   
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>             
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_INAUGURACAO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">INAUGURAÇÃO</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_INAUGURACAO" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_INAUGURACAO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>                     
+                                    </tr>
+                                    
+                                    <tr>              
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_INICIO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">INÍCIO</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_INICIO" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_INICIO"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_TERMINO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">TÉRMINO</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_TERMINO" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_TERMINO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                    </tr>
+
+                                  </tbody></table>
+                                  
+                                  <br>
+                                  
+                                  <table class="table_100 table_3td"> 
+                                    <tbody><tr>
+                                      <td class="td_49">
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_ASSUNCAO_DIVIDA --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">ASSUNÇÃO DÍVIDA (R$)</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_ASSUNCAO_DIVIDA" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_ASSUNCAO_DIVIDA"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td class="td_separador"></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_FORMA_PAGAMENTO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">FORMA PAGAMENTO DÍVIDA</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_FORMA_PAGAMENTO" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_FORMA_PAGAMENTO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                
+                                      </td>     
+                                    </tr>   
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_IMPACTO_MIX --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">IMPACTO MIX</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_IMPACTO_MIX" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_IMPACTO_MIX"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>                               
+                                  </tbody></table>
+
+                                  <br>
+                                  
+                                  <table class="table_100 table_3td"> 
+                                    <tbody><tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_FACHADA_M --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">FACHADA (m)</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_FACHADA_M" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_FACHADA_M"  onKeyUp="calculaCRD();"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+                                
+                                      </td>
+                                      <td class="td_separador"></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_LOCALIZACAO --> 
+<label class="pp-input-wrap required">  
+<b class="pp-label-text">LOCALIZAÇÃO</b>  
+<div class="pp-custom-select">  
+<select id="DADOS_GERAIS.PROPOSTACOMERCIAL_LOCALIZACAO" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_LOCALIZACAO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>            
+
+                                      </td>         
+                                    </tr> 
+                                    <tr>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_SINGULARIDADE --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">SINGULARIDADE</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_SINGULARIDADE" 
+
+name="DADOS_GERAIS.PROPOSTACOMERCIAL_SINGULARIDADE"  onKeyUp="
+calculaCRD()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                      <td></td>
+                                      <td>
+<!-- DADOS_GERAIS.PROPOSTACOMERCIAL_CRD --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text">CRD</b>   
+<input id="DADOS_GERAIS.PROPOSTACOMERCIAL_CRD" name="DADOS_GERAIS.PROPOSTACOMERCIAL_CRD"  
+
+   
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>         
+                                    </tr>                                                                     
+                                  </tbody></table>  
+                                  
+                              </div>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+<!-- CONVENCIONAL -->
+
+                <div class="tbl_convencional">
+                    <div class="pp-collapse pp-collapse-closed"><a href="#" class="pp-collapse-header" title="Default Collapse" tabindex="0"><h3 class="pp-collapse-title">CONVENCIONAL</h3></a>
+                        <div class="pp-collapse-body">
+
+                          <div class="tabs" >
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" tabindex="0">ALUGUEL</a></li>
+                              </ul>
+                              <!-- ALUGUEL -->
+                              <div class="tab">
+                                
+                                  <table class="table_100">
+                                    <tbody><tr>
+                                      <td rowspan="2">PERÍODO</td>
+                                      <td colspan="3">ALUGUEL MÍNIMO MENSAL</td>
+                                      <td colspan="2">PONTO DE EQUILÍBRIO</td>
+                                      <td rowspan="2">AMM<br>DOBRADO</td>
+                                      <td rowspan="2">CARÊNCIA</td>
+                                      <td rowspan="2">TOTAL DE<br>MESES</td>
+                                      <td>AMM ANO</td>
+                                    </tr>       
+                                    <tr>
+                                      <td>R$</td>
+                                      <td>Degrau</td>
+
+                                      <td>R$/M2</td>
+                                      <td>R$</td>
+                                      <td>R$/M2</td>
+
+                                      <td>R$</td>
+                                    </tr> 
+                                    <tr id="tr1CONVENCIONAL_ALUGUEL">
+                                      <td>1º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.1ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.1ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.1ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.1ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.1ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.1ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.1ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr> 
+                                    <tr id="tr2CONVENCIONAL_ALUGUEL">
+                                      <td>2º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.2ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.2ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.2ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.2ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.2ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.2ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.2ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr3CONVENCIONAL_ALUGUEL">
+                                      <td>3º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.3ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.3ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.3ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.3ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.3ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.3ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.3ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr4CONVENCIONAL_ALUGUEL">
+                                      <td>4º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.4ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.4ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.4ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.4ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.4ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.4ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.4ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr5CONVENCIONAL_ALUGUEL">
+                                      <td>5º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.5ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.5ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.5ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.5ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.5ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.5ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.5ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr6CONVENCIONAL_ALUGUEL">
+                                      <td>6º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.6ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.6ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.6ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.6ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.6ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.6ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.6ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr7CONVENCIONAL_ALUGUEL">
+                                      <td>7º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.7ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.7ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.7ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.7ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.7ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.7ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.7ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr8CONVENCIONAL_ALUGUEL">
+                                      <td>8º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.8ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.8ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.8ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.8ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.8ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.8ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.8ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr9CONVENCIONAL_ALUGUEL">
+                                      <td>9º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.9ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.9ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.9ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.9ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.9ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.9ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.9ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr id="tr10CONVENCIONAL_ALUGUEL">
+                                      <td>10º ANO</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="CONVENCIONAL_ALUGUEL.10ANO_CARENCIA" name="CONVENCIONAL_ALUGUEL.10ANO_CARENCIA" 
+
+  
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.10ANO_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.10ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.10ANO_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.10ANO_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.10ANO_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>                                                 
+                                    <tr>
+                                      <td colspan="6">TOTAL:</td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO</b -->   
+<input id="CONVENCIONAL_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO" 
+
+name="CONVENCIONAL_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.TOTAL_CARENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.TOTAL_CARENCIA</b -->   
+<input id="CONVENCIONAL_ALUGUEL.TOTAL_CARENCIA" 
+
+name="CONVENCIONAL_ALUGUEL.TOTAL_CARENCIA"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.TOTAL_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.TOTAL_TOTAL_DE_MESES</b -->   
+<input id="CONVENCIONAL_ALUGUEL.TOTAL_TOTAL_DE_MESES" 
+
+name="CONVENCIONAL_ALUGUEL.TOTAL_TOTAL_DE_MESES"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_ALUGUEL.TOTAL_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_ALUGUEL.TOTAL_AMM_ANO_R</b -->   
+<input id="CONVENCIONAL_ALUGUEL.TOTAL_AMM_ANO_R" 
+
+name="CONVENCIONAL_ALUGUEL.TOTAL_AMM_ANO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                    </tr>                                                                                                                                 
+                                  </tbody></table>
+
+                              </div>
+                              <!-- CDU/ADESÃO/TT< -->
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" tabindex="0">CDU/ADESÃO/TT</a></li>
+                              </ul>                             
+                              <div class="tab">
+                                
+                                  <table class="table_100"><!-- CDU/ADESÃO/TT -->
+                                    <tbody><tr>
+                                      <td></td>
+                                      <td>CDU</td>
+                                      <td>TAXA TRANSFERÊNCIA</td>
+                                      <td>ALLOWANCE</td>
+                                      <td>MÚTUO</td>  
+                                    </tr>       
+                                    <tr>
+                                      <td>TABELA (R$) :</td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.TABELA_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.TABELA_CDU</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.TABELA_CDU" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.TABELA_CDU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_TRANSFERENCIA</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_TRANSFERENCIA" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_TRANSFERENCIA"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_ADESAO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_ADESAO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.TABELA_TAXA_ADESAO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.TABELA_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.TABELA_MUTUO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.TABELA_MUTUO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.TABELA_MUTUO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                    </tr> 
+<tr>
+                                      <td>PROPOSTA (R$) :</td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_CDU</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_CDU" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_CDU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_TRANSFERENCIA</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_TRANSFERENCIA" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_TRANSFERENCIA"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_ADESAO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_ADESAO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_TAXA_ADESAO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_MUTUO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_MUTUO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTA_MUTUO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>PROPOSTA (R$/m2) :</td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_CDU</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_CDU" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_CDU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                      
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_TRANSFERENCIA</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_TRANSFERENCIA" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_TRANSFERENCIA"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_ADESAO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_ADESAO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_TAXA_ADESAO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_MUTUO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_MUTUO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.PROPOSTAM2_MUTUO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                    
+                                      </td>
+                                    </tr>
+  
+                                    <tr>
+                                      <td>SINAL (R$) :</td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SINAL_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SINAL_CDU</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SINAL_CDU" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SINAL_CDU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+                                  
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_TRANSFERENCIA</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_TRANSFERENCIA" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_TRANSFERENCIA"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_ADESAO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_ADESAO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SINAL_TAXA_ADESAO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SINAL_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SINAL_MUTUO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SINAL_MUTUO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SINAL_MUTUO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>SALDO (R$) :</td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SALDO_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SALDO_CDU</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SALDO_CDU" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SALDO_CDU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_TRANSFERENCIA</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_TRANSFERENCIA" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_TRANSFERENCIA"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_ADESAO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_ADESAO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SALDO_TAXA_ADESAO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.SALDO_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.SALDO_MUTUO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.SALDO_MUTUO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.SALDO_MUTUO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>FORMA DE PAGAMENTO DO SALDO :</td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO</b -->   
+<input id="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>   
+ 
+
+                                      </td>
+                                      <td>
+<!-- CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO</b --> 
+
+  
+<input id="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO" 
+
+name="CONVENCIONAL_CDU_ADESAO_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+
+                                      </td>
+                                    </tr>                                       
+
+                                  </tbody></table>
+
+                              </div>                            
+                          </div>
+
+
+
+                          <table class="table_100"><!-- VGL -->
+                            <tbody>
+                            <tr>
+                              <td>VGL (R$)</td>
+                              <td>
+<!-- CONVENCIONAL_VGL.VGL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_VGL.VGL_R</b -->   
+<input id="CONVENCIONAL_VGL.VGL_R" name="CONVENCIONAL_VGL.VGL_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                              </td>
+                              <td>LEASING SPREAD</td>
+                              <td>
+<!-- CONVENCIONAL_VGL.LEASING_SPREAD --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_VGL.LEASING_SPREAD</b -->   
+<input id="CONVENCIONAL_VGL.LEASING_SPREAD" name="CONVENCIONAL_VGL.LEASING_SPREAD"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                              </td>
+                              <td>COMERCIALIZAÇÃO</td>
+                              <td>
+<!-- CONVENCIONAL_VGL.COMERCIALIZACAO_PERC --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_VGL.COMERCIALIZACAO_PERC</b -->   
+<input id="CONVENCIONAL_VGL.COMERCIALIZACAO_PERC" 
+
+name="CONVENCIONAL_VGL.COMERCIALIZACAO_PERC"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+                          
+                              </td>   
+                              <td>
+<!-- CONVENCIONAL_VGL.COMERCIALIZACAO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">CONVENCIONAL_VGL.COMERCIALIZACAO_R</b -->   
+<input id="CONVENCIONAL_VGL.COMERCIALIZACAO_R" name="CONVENCIONAL_VGL.COMERCIALIZACAO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+                      
+                              </td>                   
+                            </tr>       
+                            </tbody>
+                          </table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- POP UP -->
+<div class="tbl_popup hidden">
+                    <div class="pp-collapse pp-collapse-closed"><a href="#" class="pp-collapse-header" title="Default Collapse" tabindex="0"><h3 class="pp-collapse-title">POP UP</h3></a>
+                        <div class="pp-collapse-body">
+
+                          <div  class="tabs" >
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" tabindex="0">ALUGUEL</a></li>
+                              </ul>
+                              <!-- ALUGUEL -->
+                              <div class="tab">
+                                                    
+                                <table class="table_100"><!-- ALUGUEL -->
+                                  <tbody><tr>
+                                    <td rowspan="2">PERÍODO</td>
+                                    <td rowspan="2" class="toolTip" title="<b>AMM01:</b --> AMM fixo + AL % + CRD + FPP (20%)<br/><b>AMM02:</b --> AMM fixo - Condomínio Fixo (R$) + FPP (definir) - Para Âncoras e Megalojas<br/><b>CTO1:</b --> % Faturamento Bruto, Sem Garantia<br/><b>CTO2:</b --> % Faturamento Bruto, Com Garantia de Condomínio<br/><b>CMM:</b --> Valor Fixo, com destinação para Aluguel, Condomínio e FPP já predeterminado">
+                                      MODELO
+                                    </td>
+                                    <td rowspan="2">CTO</td>
+                                    <td colspan="3">ALUGUEL MÍNIMO MENSAL</td>
+                                    <td colspan="2">PONTO DE EQUILÍBRIO</td>
+                                    <td rowspan="2">AMM<br>DOBRADO<br>DEZEMBRO</td>
+                                    <td rowspan="2">CARÊNCIA</td>
+                                    <td rowspan="2">TOTAL DE<br>MESES</td>
+                                    <td>AMM ANO</td>
+                                  </tr>       
+                                  <tr>
+                                    <td>R$</td>
+                                    <td>Degrau</td>
+
+                                    <td>R$/M2</td>
+                                    <td>R$</td>
+                                    <td>R$/M2</td>
+
+                                    <td>R$</td>
+                                  </tr> 
+                                  <tr>
+                                    <td>1º ANO</td>
+                                    <td width="8%">
+<!-- POPUP_ALUGUEL.1ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="POPUP_ALUGUEL.1ANO_MODELO" name="POPUP_ALUGUEL.1ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1CTO</b -->   
+<input id="POPUP_ALUGUEL.1CTO" name="POPUP_ALUGUEL.1CTO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R</b -->   
+<input id="POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R" 
+
+name="POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_DEGRAU</b -->   
+<input id="POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_DEGRAU" 
+
+name="POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R_M2</b -->   
+<input id="POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R_M2" 
+
+name="POPUP_ALUGUEL.1ANO_ALUGUELMINIMOMENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R</b -->   
+<input id="POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R" 
+
+name="POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R_M2</b -->   
+<input id="POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R_M2" 
+
+name="POPUP_ALUGUEL.1ANO_PONTODEEQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="POPUP_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="POPUP_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="POPUP_ALUGUEL.1ANO_CARENCIA" name="POPUP_ALUGUEL.1ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_TOTAL_DE_MESES</b -->   
+<input id="POPUP_ALUGUEL.1ANO_TOTAL_DE_MESES" name="POPUP_ALUGUEL.1ANO_TOTAL_DE_MESES"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.1ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.1ANO_AMM_ANO_R</b -->   
+<input id="POPUP_ALUGUEL.1ANO_AMM_ANO_R" name="POPUP_ALUGUEL.1ANO_AMM_ANO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr> 
+                                  <tr>
+                                    <td colspan="7">TOTAL:</td>
+                                    <td>
+<!-- POPUP_ALUGUEL.TOTAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.TOTAL_R_M2</b -->   
+<input id="POPUP_ALUGUEL.TOTAL_R_M2" name="POPUP_ALUGUEL.TOTAL_R_M2"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO</b -->   
+<input id="POPUP_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO" 
+
+name="POPUP_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- POPUP_ALUGUEL.TOTAL_CARENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.TOTAL_CARENCIA</b -->   
+<input id="POPUP_ALUGUEL.TOTAL_CARENCIA" name="POPUP_ALUGUEL.TOTAL_CARENCIA"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  <td>R$</td>
+                                    <td>
+<!-- POPUP_ALUGUEL.TOTAL_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_ALUGUEL.TOTAL_AMM_ANO_R</b -->   
+<input id="POPUP_ALUGUEL.TOTAL_AMM_ANO_R" name="POPUP_ALUGUEL.TOTAL_AMM_ANO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                  </tr>                                                                                                                                 
+                                </tbody>
+                                </table><!-- FIM ALUGUEL -->
+
+
+                                <table class="table_100"><!-- VGL -->
+                                  <tbody><tr>
+                                    <td>VGL (R$)</td>
+                                    <td>
+<!-- POPUP_VGL.VGL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_VGL.VGL_R</b -->   
+<input id="POPUP_VGL.VGL_R" name="POPUP_VGL.VGL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>LEASING SPREAD</td>
+                                    <td>
+<!-- POPUP_VGL.LEASING_SPREAD --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_VGL.LEASING_SPREAD</b -->   
+<input id="POPUP_VGL.LEASING_SPREAD" name="POPUP_VGL.LEASING_SPREAD"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>COMERCIALIZAÇÃO</td>
+                                    <td>
+<!-- POPUP_VGL.COMERCIALIZACAO_PERC --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_VGL.COMERCIALIZACAO_PERC</b -->   
+<input id="POPUP_VGL.COMERCIALIZACAO_PERC" name="POPUP_VGL.COMERCIALIZACAO_PERC"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>   
+                                    <td>
+<!-- POPUP_VGL.COMERCIALIZACAO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">POPUP_VGL.COMERCIALIZACAO_R</b -->   
+<input id="POPUP_VGL.COMERCIALIZACAO_R" name="POPUP_VGL.COMERCIALIZACAO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>                   
+                                  </tr>       
+                                  </tbody>
+                                </table><!-- FIM VGL -->
+
+
+                              </div>
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+
+<!-- OUTRAS NEGOCIAÇÕES -->
+<div class="tbl_outros hidden">
+                    <div class="pp-collapse pp-collapse-closed"><a href="#" class="pp-collapse-header" title="Default Collapse" tabindex="0"><h3 class="pp-collapse-title">OUTRAS NEGOCIAÇÕES</h3></a>
+                        <div class="pp-collapse-body">
+
+                          <div class="tabs" >
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" tabindex="0">ALUGUEL</a></li>
+                              </ul>
+                              <!-- ALUGUEL -->
+                              <div class="tab">
+                                
+                                <table class="table_100"><!-- ALUGUEL -->
+                                  <tbody><tr>
+                                    <td rowspan="2">PERÍODO</td>
+                                    <td rowspan="2" class="toolTip" title="<b>AMM01:</b --> AMM fixo + AL % + CRD + FPP (20%)<br/><b>AMM02:</b --> AMM fixo - Condomínio Fixo (R$) + FPP (definir) - Para Âncoras e Megalojas<br/><b>CTO1:</b --> % Faturamento Bruto, Sem Garantia<br/><b>CTO2:</b --> % Faturamento Bruto, Com Garantia de Condomínio<br/><b>CMM:</b --> Valor Fixo, com destinação para Aluguel, Condomínio e FPP já predeterminado">
+                                      MODELO
+                                    </td>
+                                    <td rowspan="2">CTO</td>
+                                    <td colspan="3">ALUGUEL MÍNIMO MENSAL</td>
+                                    <td colspan="2">PONTO DE EQUILÍBRIO</td>
+                                    <td rowspan="2">AMM<br>DOBRADO<br>DEZEMBRO</td>
+                                    <td rowspan="2">CARÊNCIA</td>
+                                    <td rowspan="2">TOTAL DE<br>MESES</td>
+                                    <td>AMM ANO</td>
+                                  </tr>       
+                                  <tr>
+                                    <td>R$</td>
+                                    <td>Degrau</td>
+
+                                    <td>R$/M2</td>
+                                    <td>R$</td>
+                                    <td>R$/M2</td>
+
+                                    <td>R$</td>
+                                  </tr> 
+                                  <tr id="tr1OUTROS_ALUGUEL">
+                                    <td>1º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.1ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.1ANO_MODELO" name="OUTROS_ALUGUEL.1ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1CTO</b -->   
+<input id="OUTROS_ALUGUEL.1CTO" name="OUTROS_ALUGUEL.1CTO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.1ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.1ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.1ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.1ANO_CARENCIA" name="OUTROS_ALUGUEL.1ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.1ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.1ANO_TOTAL_DE_MESES"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.1ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.1ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.1ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.1ANO_AMM_ANO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>   
+                                  <tr id="tr2OUTROS_ALUGUEL">
+                                    <td>2º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.2ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.2ANO_MODELO" name="OUTROS_ALUGUEL.2ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2CTO</b -->   
+<input id="OUTROS_ALUGUEL.2CTO" name="OUTROS_ALUGUEL.2CTO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.2ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.2ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.2ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.2ANO_CARENCIA" name="OUTROS_ALUGUEL.2ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.2ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.2ANO_TOTAL_DE_MESES"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.2ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.2ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.2ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.2ANO_AMM_ANO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr> 
+                                  <tr id="tr3OUTROS_ALUGUEL">
+                                    <td>3º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.3ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.3ANO_MODELO" name="OUTROS_ALUGUEL.3ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3CTO</b -->   
+<input id="OUTROS_ALUGUEL.3CTO" name="OUTROS_ALUGUEL.3CTO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.3ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.3ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.3ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.3ANO_CARENCIA" name="OUTROS_ALUGUEL.3ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.3ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.3ANO_TOTAL_DE_MESES"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.3ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.3ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.3ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.3ANO_AMM_ANO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr> 
+                                  <tr id="tr4OUTROS_ALUGUEL">
+                                    <td>4º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.4ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.4ANO_MODELO" name="OUTROS_ALUGUEL.4ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4CTO</b -->   
+<input id="OUTROS_ALUGUEL.4CTO" name="OUTROS_ALUGUEL.4CTO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.4ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.4ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.4ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.4ANO_CARENCIA" name="OUTROS_ALUGUEL.4ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.4ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.4ANO_TOTAL_DE_MESES"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.4ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.4ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.4ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.4ANO_AMM_ANO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>
+                                  <tr id="tr5OUTROS_ALUGUEL">
+                                    <td>5º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.5ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.5ANO_MODELO" name="OUTROS_ALUGUEL.5ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5CTO</b -->   
+<input id="OUTROS_ALUGUEL.5CTO" name="OUTROS_ALUGUEL.5CTO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.5ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.5ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.5ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.5ANO_CARENCIA" name="OUTROS_ALUGUEL.5ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.5ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.5ANO_TOTAL_DE_MESES"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.5ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.5ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.5ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.5ANO_AMM_ANO_R"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>
+                                  <tr id="tr6OUTROS_ALUGUEL">
+                                    <td>6º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.6ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.6ANO_MODELO" name="OUTROS_ALUGUEL.6ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6CTO</b -->   
+<input id="OUTROS_ALUGUEL.6CTO" name="OUTROS_ALUGUEL.6CTO"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.6ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.6ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.6ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.6ANO_CARENCIA" name="OUTROS_ALUGUEL.6ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.6ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.6ANO_TOTAL_DE_MESES"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.6ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.6ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.6ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.6ANO_AMM_ANO_R"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>
+                                  <tr id="tr7OUTROS_ALUGUEL">
+                                    <td>7º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.7ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.7ANO_MODELO" name="OUTROS_ALUGUEL.7ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7CTO</b -->   
+<input id="OUTROS_ALUGUEL.7CTO" name="OUTROS_ALUGUEL.7CTO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.7ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.7ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.7ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.7ANO_CARENCIA" name="OUTROS_ALUGUEL.7ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.7ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.7ANO_TOTAL_DE_MESES"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.7ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.7ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.7ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.7ANO_AMM_ANO_R"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>
+                                  <tr id="tr8OUTROS_ALUGUEL">
+                                    <td>8º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.8ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.8ANO_MODELO" name="OUTROS_ALUGUEL.8ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8CTO</b -->   
+<input id="OUTROS_ALUGUEL.8CTO" name="OUTROS_ALUGUEL.8CTO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.8ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.8ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.8ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.8ANO_CARENCIA" name="OUTROS_ALUGUEL.8ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.8ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.8ANO_TOTAL_DE_MESES"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.8ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.8ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.8ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.8ANO_AMM_ANO_R"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>
+                                  <tr id="tr9OUTROS_ALUGUEL">
+                                    <td>9º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.9ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.9ANO_MODELO" name="OUTROS_ALUGUEL.9ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9CTO</b -->   
+<input id="OUTROS_ALUGUEL.9CTO" name="OUTROS_ALUGUEL.9CTO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.9ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.9ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.9ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.9ANO_CARENCIA" name="OUTROS_ALUGUEL.9ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.9ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.9ANO_TOTAL_DE_MESES"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.9ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.9ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.9ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.9ANO_AMM_ANO_R"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>
+                                  <tr id="tr10OUTROS_ALUGUEL">
+                                    <td>10º ANO</td>
+                                    <td width="8%">
+<!-- OUTROS_ALUGUEL.10ANO_MODELO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_MODELO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.10ANO_MODELO" name="OUTROS_ALUGUEL.10ANO_MODELO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10CTO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10CTO</b -->   
+<input id="OUTROS_ALUGUEL.10CTO" name="OUTROS_ALUGUEL.10CTO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R</b -->   
+<input id="OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R" 
+
+name="OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU</b -->   
+<input id="OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU" 
+
+name="OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_DEGRAU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2" 
+
+name="OUTROS_ALUGUEL.10ANO_ALUGUEL_MINIMO_MENSAL_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R</b -->   
+<input id="OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R" 
+
+name="OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2 --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2</b -->   
+<input id="OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2" 
+
+name="OUTROS_ALUGUEL.10ANO_PONTO_DE_EQUILIBRIO_R_M2"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.10ANO_AMM_DOBRADO_DEZEMBRO"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_CARENCIA --> 
+<label class="pp-input-wrap required">  
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_CARENCIA</b -->  
+<div class="pp-custom-select">  
+<select id="OUTROS_ALUGUEL.10ANO_CARENCIA" name="OUTROS_ALUGUEL.10ANO_CARENCIA"   
+tabindex="0" class="pp-select save">  
+</select>  
+</div>  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.10ANO_TOTAL_DE_MESES" name="OUTROS_ALUGUEL.10ANO_TOTAL_DE_MESES"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.10ANO_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.10ANO_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.10ANO_AMM_ANO_R" name="OUTROS_ALUGUEL.10ANO_AMM_ANO_R"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>                                                 
+                                  <tr>
+                                    <td colspan="8">TOTAL:</td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO</b -->   
+<input id="OUTROS_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO" 
+
+name="OUTROS_ALUGUEL.TOTAL_AMM_DOBRADO_DEZEMBRO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.TOTAL_CARENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.TOTAL_CARENCIA</b -->   
+<input id="OUTROS_ALUGUEL.TOTAL_CARENCIA" name="OUTROS_ALUGUEL.TOTAL_CARENCIA"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.TOTAL_TOTAL_DE_MESES --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.TOTAL_TOTAL_DE_MESES</b -->   
+<input id="OUTROS_ALUGUEL.TOTAL_TOTAL_DE_MESES" 
+
+name="OUTROS_ALUGUEL.TOTAL_TOTAL_DE_MESES"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                    <td>
+<!-- OUTROS_ALUGUEL.TOTAL_AMM_ANO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_ALUGUEL.TOTAL_AMM_ANO_R</b -->   
+<input id="OUTROS_ALUGUEL.TOTAL_AMM_ANO_R" name="OUTROS_ALUGUEL.TOTAL_AMM_ANO_R"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                    </td>
+                                  </tr>                                                                                                                                 
+                                </tbody></table><!-- FIM ALUGUEL -->
+
+                              </div>
+                              <!-- CDU/ADESÃO/TT< -->
+                              <ul class="pp-tab pp-text-left pp-tab-border">
+                                  <li><a class="" href="#" tabindex="0">
+                                  CDU/ADESÃO/TT</a></li>
+                              </ul>                             
+                              <div class="tab">
+                                
+
+                                  <table class="table_100"><!-- CDU/ADESÃO/TT -->
+                                    <tbody><tr>
+                                      <td></td>
+                                      <td>CDU</td>
+                                      <td>TAXA TRANSFERÊNCIA</td>
+                                      <td>ALLOWANCE</td>
+                                      <td>MÚTUO</td>  
+                                    </tr>       
+                                    <tr>
+                                      <td>TABELA (R$) :</td>
+                                      <td>
+<!-- OUTROS_CDU_TT.TABELA_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.TABELA_CDU</b -->   
+<input id="OUTROS_CDU_TT.TABELA_CDU" name="OUTROS_CDU_TT.TABELA_CDU"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.TABELA_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.TABELA_TAXA_TRANSFERENCIA</b -->   
+<input id="OUTROS_CDU_TT.TABELA_TAXA_TRANSFERENCIA" 
+
+name="OUTROS_CDU_TT.TABELA_TAXA_TRANSFERENCIA"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.TABELA_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.TABELA_TAXA_ADESAO</b -->   
+<input id="OUTROS_CDU_TT.TABELA_TAXA_ADESAO" name="OUTROS_CDU_TT.TABELA_TAXA_ADESAO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.TABELA_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.TABELA_MUTUO</b -->   
+<input id="OUTROS_CDU_TT.TABELA_MUTUO" name="OUTROS_CDU_TT.TABELA_MUTUO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>PROPOSTA (R$) :</td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTA_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTA_CDU</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTA_CDU" name="OUTROS_CDU_TT.PROPOSTA_CDU"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTA_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTA_TAXA_TRANSFERENCIA</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTA_TAXA_TRANSFERENCIA" 
+
+name="OUTROS_CDU_TT.PROPOSTA_TAXA_TRANSFERENCIA"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTA_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTA_TAXA_ADESAO</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTA_TAXA_ADESAO" name="OUTROS_CDU_TT.PROPOSTA_TAXA_ADESAO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTA_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTA_MUTUO</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTA_MUTUO" name="OUTROS_CDU_TT.PROPOSTA_MUTUO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>PROPOSTA (R$/m2) :</td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTAM2_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTAM2_CDU</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTAM2_CDU" name="OUTROS_CDU_TT.PROPOSTAM2_CDU"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTAM2_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTAM2_TAXA_TRANSFERENCIA</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTAM2_TAXA_TRANSFERENCIA" 
+
+name="OUTROS_CDU_TT.PROPOSTAM2_TAXA_TRANSFERENCIA"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTAM2_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTAM2_TAXA_ADESAO</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTAM2_TAXA_ADESAO" 
+
+name="OUTROS_CDU_TT.PROPOSTAM2_TAXA_ADESAO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.PROPOSTAM2_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.PROPOSTAM2_MUTUO</b -->   
+<input id="OUTROS_CDU_TT.PROPOSTAM2_MUTUO" name="OUTROS_CDU_TT.PROPOSTAM2_MUTUO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>SINAL (R$) :</td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SINAL_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SINAL_CDU</b -->   
+<input id="OUTROS_CDU_TT.SINAL_CDU" name="OUTROS_CDU_TT.SINAL_CDU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SINAL_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SINAL_TAXA_TRANSFERENCIA</b -->   
+<input id="OUTROS_CDU_TT.SINAL_TAXA_TRANSFERENCIA" 
+
+name="OUTROS_CDU_TT.SINAL_TAXA_TRANSFERENCIA"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SINAL_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SINAL_TAXA_ADESAO</b -->   
+<input id="OUTROS_CDU_TT.SINAL_TAXA_ADESAO" name="OUTROS_CDU_TT.SINAL_TAXA_ADESAO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SINAL_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SINAL_MUTUO</b -->   
+<input id="OUTROS_CDU_TT.SINAL_MUTUO" name="OUTROS_CDU_TT.SINAL_MUTUO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                                  
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>SALDO (R$) :</td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SALDO_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SALDO_CDU</b -->   
+<input id="OUTROS_CDU_TT.SALDO_CDU" name="OUTROS_CDU_TT.SALDO_CDU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SALDO_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SALDO_TAXA_TRANSFERENCIA</b -->   
+<input id="OUTROS_CDU_TT.SALDO_TAXA_TRANSFERENCIA" 
+
+name="OUTROS_CDU_TT.SALDO_TAXA_TRANSFERENCIA"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+                                  
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SALDO_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SALDO_TAXA_ADESAO</b -->   
+<input id="OUTROS_CDU_TT.SALDO_TAXA_ADESAO" name="OUTROS_CDU_TT.SALDO_TAXA_ADESAO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.SALDO_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.SALDO_MUTUO</b -->   
+<input id="OUTROS_CDU_TT.SALDO_MUTUO" name="OUTROS_CDU_TT.SALDO_MUTUO"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>FORMA DE PAGAMENTO DO SALDO :</td>
+                                      <td>
+<!-- OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU</b -->   
+<input id="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU" 
+
+name="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_CDU"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA</b --> 
+
+  
+<input id="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA" 
+
+name="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_TRANSFERENCIA"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                        
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO</b -->   
+<input id="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO" 
+
+name="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_TAXA_ADESAO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                      </td>
+                                      <td>
+<!-- OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO</b -->   
+<input id="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO" 
+
+name="OUTROS_CDU_TT.FORMA_DE_PAGAMENTO_DO_SALDO_MUTUO"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>
+
+                                      </td>
+                                    </tr>
+                                  </tbody></table><!-- FIM CDU/ADESÃO/TT -->
+
+                              </div>  
+
+                              <table class="table_100"><!-- VGL -->
+                                <tbody><tr>
+                                  <td>VGL (R$)</td>
+                                  <td>
+<!-- OUTROS_VGL.VGL_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_VGL.VGL_R</b -->   
+<input id="OUTROS_VGL.VGL_R" name="OUTROS_VGL.VGL_R"  onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                  </td>
+                                  <td>LEASING SPREAD</td>
+                                  <td>
+<!-- OUTROS_VGL.LEASING_SPREAD --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_VGL.LEASING_SPREAD</b -->   
+<input id="OUTROS_VGL.LEASING_SPREAD" name="OUTROS_VGL.LEASING_SPREAD"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+                              
+                                  </td>
+                                  <td>COMERCIALIZAÇÃO</td>
+                                  <td>
+<!-- OUTROS_VGL.COMERCIALIZACAO_PERC --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_VGL.COMERCIALIZACAO_PERC</b -->   
+<input id="OUTROS_VGL.COMERCIALIZACAO_PERC" name="OUTROS_VGL.COMERCIALIZACAO_PERC"  
+
+onKeyUp="calcularDadosTipoNegociacao()"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                  </td>   
+                                  <td>
+<!-- OUTROS_VGL.COMERCIALIZACAO_R --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">OUTROS_VGL.COMERCIALIZACAO_R</b -->   
+<input id="OUTROS_VGL.COMERCIALIZACAO_R" name="OUTROS_VGL.COMERCIALIZACAO_R"  
+
+onKeyUp="
+calcularDadosTipoNegociacao()
+"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                  </td>                   
+                                </tr>       
+                              </tbody></table><!-- FIM VGL -->
+
+                          </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+
+<!-- OBSERVAÇÃO -->
+                <div class="">
+                    <div class="pp-collapse pp-collapse-closed"><a href="#" class="pp-collapse-header" title="Default Collapse" tabindex="0"><h3 class="pp-collapse-title">OBSERVAÇÃO</h3></a>
+                        <div class="pp-collapse-body">
+
+<!-- PARECERES.OBSERVACAO --> 
+<label class="pp-input-wrap">   
+<b class="pp-label-text"></b>   
+<textarea id="PARECERES.OBSERVACAO" name="PARECERES.OBSERVACAO"   tabindex="0" class="pp-input"></textarea>   
+</label>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+<!-- PARECERES -->
+                <div class="">
+                    <div class="pp-collapse pp-collapse-closed"><a href="#" class="pp-collapse-header" title="Default Collapse" tabindex="0"><h3 class="pp-collapse-title">PARECERES</h3></a>
+                        <div class="pp-collapse-body">
+
+                            <table class="table_100">           
+                              <tbody><tr>
+                                <td>SUPERINTENDENTE SHOPPING</td> 
+                                <td>DIRETORIA COMERCIAL</td>  
+                                <td>SUPERINTENDENTE COMERCIAL</td>  
+                                <td>DIRETORIA DE FINANÇAS</td>            
+                              </tr>     
+                              <tr>
+                                <td>
+<!-- PARECERES.SUPERINTENDENTE_DESCRICAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">PARECERES.SUPERINTENDENTE_DESCRICAO</b -->   
+<textarea id="PARECERES.SUPERINTENDENTE_DESCRICAO" name="PARECERES.SUPERINTENDENTE_DESCRICAO"   tabindex="0" 
+
+class="pp-input"></textarea>   
+</label>
+                            
+                                </td>
+                                <td>
+<!-- PARECERES.DIRETORIACOMERCIAL_DESCRICAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">PARECERES.DIRETORIACOMERCIAL_DESCRICAO</b -->   
+<textarea id="PARECERES.DIRETORIACOMERCIAL_DESCRICAO" name="PARECERES.DIRETORIACOMERCIAL_DESCRICAO"   tabindex="0" 
+
+class="pp-input"></textarea>   
+</label>
+
+                                </td>           
+                                <td>
+<!-- PARTAGE COMERCIALIZAÇÃO.OBS COMERCIAL --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">PARTAGE COMERCIALIZAÇÃO.OBS COMERCIAL</b -->   
+<textarea id="PARTAGE COMERCIALIZAÇÃO.OBS COMERCIAL" name="PARTAGE COMERCIALIZAÇÃO.OBS COMERCIAL"   tabindex="0" 
+
+class="pp-input"></textarea>   
+</label>
+
+                                      
+                                </td>
+                                <td>
+<!-- PARECERES.DIRETORFINANCEIRO_DESCRICAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">PARECERES.DIRETORFINANCEIRO_DESCRICAO</b -->   
+<textarea id="PARECERES.DIRETORFINANCEIRO_DESCRICAO" name="PARECERES.DIRETORFINANCEIRO_DESCRICAO"   tabindex="0" 
+
+class="pp-input"></textarea>   
+</label>
+                              
+                                </td>       
+                              </tr>       
+                            </tbody></table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- COMITÊ -->
+                <div class="">
+                    <div class="pp-collapse pp-collapse-closed"><a href="#" class="pp-collapse-header" title="Default Collapse" tabindex="0"><h3 class="pp-collapse-title">COMITÊ</h3></a>
+                        <div class="pp-collapse-body">
+
+                            <!-- COMITÊ -->
+                            <table class="table_100"> 
+                              <tbody><tr>
+                                <td>
+<!-- COMITE.DESCRICAO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.DESCRICAO</b -->   
+<textarea id="COMITE.DESCRICAO" name="COMITE.DESCRICAO"   tabindex="0" class="pp-input"></textarea>   
+</label>
+
+                              </tr>       
+                            </tbody></table>  
+
+                            <br>        
+                            
+                            <table class="table_100"> 
+                              <tbody><tr>
+                                <td>AJUSTES SOLICITADOS PELO CEO</td>
+                              </tr>
+                              <tr>
+                                <td>
+<!-- COMITE.CEO_AJUSTE --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.CEO_AJUSTE</b -->   
+<textarea id="COMITE.CEO_AJUSTE" name="COMITE.CEO_AJUSTE"   tabindex="0" class="pp-input"></textarea>   
+</label>
+
+                                </td> 
+                              </tr>
+                            </tbody></table>
+                            <br>
+                            
+                            <table class="table_100"> 
+                              <tbody><tr>
+                                <td>SUPERINTENDENTE SHOPPING</td>
+                                <td>
+<!-- COMITE.SUPERINTENDENTE --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.SUPERINTENDENTE</b -->   
+<input id="COMITE.SUPERINTENDENTE" name="COMITE.SUPERINTENDENTE"     
+type="text" tabindex="0" class="pp-input save">  
+</label> 
+
+                                </td>
+                                <td>DIRETOR DE FINANÇAS</td>              
+                                <td>
+<!-- COMITE.DIRETORIA_FINANCAS --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.DIRETORIA_FINANCAS</b -->   
+<input id="COMITE.DIRETORIA_FINANCAS" name="COMITE.DIRETORIA_FINANCAS"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                </td>
+                              </tr>
+                              
+                              <tr>
+                                <td>SUPERINTENDENTE COMERCIAL</td>    
+                                <td>
+<!-- COMITE.SUPERINTENDENTE_COMERCIAL --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.SUPERINTENDENTE_COMERCIAL</b -->   
+<input id="COMITE.SUPERINTENDENTE_COMERCIAL" name="COMITE.SUPERINTENDENTE_COMERCIAL"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+
+                                </td>
+                                <td>EXECUTIVO COMERCIAL</td>
+                                <td>
+<!-- COMITE.NOME_CORRETOR --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.NOME_CORRETOR</b -->   
+<input id="COMITE.NOME_CORRETOR" name="COMITE.NOME_CORRETOR"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                </td>
+                              </tr>
+                              
+                              <tr>
+                                <td>DIRETORIA COMERCIAL</td>    
+                                <td>
+<!-- COMITE.DIRETORIA_COMERCIAL --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.DIRETORIA_COMERCIAL</b -->   
+<input id="COMITE.DIRETORIA_COMERCIAL" name="COMITE.DIRETORIA_COMERCIAL"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                </td>
+                                <td>CEO</td>    
+                                <td>
+<!-- COMITE.NOME_CEO --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.NOME_CEO</b -->   
+<input id="COMITE.NOME_CEO" name="COMITE.NOME_CEO"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                </td> 
+                              </tr>
+                              
+                              <tr>
+                                <td></td>   
+                                <td>
+                        <!-- COMITE.DIRETORIA_DE_GESTAO -->
+                                </td> 
+                                <td>DATA DE APROVAÇÃO</td>
+                                <td>
+<!-- COMITE.DATA_DO_COMITE --> 
+<label class="pp-input-wrap">   
+<!-- b class="pp-label-text">COMITE.DATA_DO_COMITE</b -->   
+<input id="COMITE.DATA_DO_COMITE" name="COMITE.DATA_DO_COMITE"     
+type="text" tabindex="0" class="pp-input save">  
+</label>  
+
+                                </td> 
+                              </tr> 
+                            </tbody></table>        
+                          <!-- FIM COMITÊ -->
+
+
+                        </div>
+                    </div>
+                </div>
+
+             </section>
+          </div>
+
+          <br>
+          <br>     
+
+          <p id="btnSalvar">
+            <a href="javascript:printContainer()" class="pp-btn"><span>Imprimir</span></a>
+          </p>
+          <br>                
+
+        </div>
+    </div>
+    
+    <!-- Pipefy Apps SDK.js -->
+    <script src="https://d1ukdhoxof1oxs.cloudfront.net/pipefy-client.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/pipestyle/3.5.12/assets/stylesheets/platform-apps.css" />   
+    <script src="./js/htmlentities.js?a1a12151454s6a"></script>       
+    <script src="./js/data-base.js?a22s1111aaa54a1aaa1"></script>
+    <script src="./js/grid.js?1a1asa"></script>
+    <script src="./js/tabs.js?1a1asa"></script>
+    <script src="./js/collapse.js?1a1asa"></script>
+    <script src="./js/ferramentas.js?1a1asa"></script>
+    <script src="./js/popup.js?a111asaaa21aaa1aqqa"></script>  
+    <script src="./js/jquery.maskMoney.js?a11asaaaa1"></script>
+    <script src="./js/mask.js?a11asaaaa1"></script>
+    <script src="./js/required.js?a1a1215544aa1454saa6a"></script>
+    <script src="./js/moment.min.js?a1a12155441454aas6a"></script>
+    <script src="./js/valida.js?a1a12155441454saa6a"></script>
+    <!-- script src="./js/card-tab.js?a111asaaa21"></script -->  
+    
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>    
+
+<script type="text/javascript">
+
+
+
+  
+$('input').each(function(){
+    $(this).val('[--'+$(this).attr('id')+'--]');
+})
+
+$('textarea').each(function(){
+    $(this).val('[--'+$(this).attr('id')+'--]');
+})
+
+$('select').each(function(){
+    $(this).replaceWith('<input type="text" tabindex="0" class="pp-input save" value="[--'+$(this).attr('id')+'--]" id="'+$(this).attr('id')+'" name="'+$(this).attr('id')+'">');
+})
+
+$('.pp-custom-select').removeClass('pp-custom-select');
+
+
+$('#DADOS_GERAIS\\.TIPO_NEGOCIACAO').val('CONVENCIONAL');
+
+var tipoNegociacao = $('#DADOS_GERAIS\\.TIPO_NEGOCIACAO').val();
+//alert($('#DADOS_GERAIS\\.TIPO_NEGOCIACAO').val());
+if(tipoNegociacao == 'OUTROS'){
+  $(".tbl_convencional").hide();
+  $(".tbl_popup").hide();
+  $(".tbl_outros").show();
+}
+else if(tipoNegociacao == 'POP_UP'){
+  $(".tbl_convencional").hide();
+  $(".tbl_popup").show();
+  $(".tbl_outros").hide();
+}
+else{//convencional. padrao selecionado
+  $(".tbl_convencional").show();
+  $(".tbl_popup").hide();
+  $(".tbl_outros").hide();
+} 
+
+
+function printContainer(){
+
+  $('#container').removeClass( 'container_scroll' );
+  $('#btnSalvar').hide();
+
+  window.print();
+
+  $('#container').addClass( 'container_scroll' );
+  $('#btnSalvar').show();
+
+}
+
+
+
+
+</script>   
+    
+
+    <!-- LOCAL 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/pipestyle/3.5.12/assets/stylesheets/platform-apps.css" />    
+    <script src="http://localhost/pipefy/forms/start-form-js/public/js/card-tab.js?o"></script>-->
+    <!-- LOCAL -->
+
+  </body>
+</html>

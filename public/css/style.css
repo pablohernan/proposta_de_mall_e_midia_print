@@ -1,0 +1,267 @@
+
+.pp-table-content {
+    background: #fff;
+    border: 1px solid #c0d0e6;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 0 20px 10px 20px;
+    width: 100%
+}
+
+.pp-table-content.pp-height-control {
+    height: calc(100vh - 220px);
+    overflow: hidden
+}
+
+.pp-table {
+    width: 100%
+}
+
+.pp-table.pp-table-spacing {
+    display: block;
+    margin: 0;
+    padding: 20px 0
+}
+
+.pp-table a {
+    color: #293e52
+}
+
+.pp-table thead .pp-header-table-actions {
+    background: #cdd9eb;
+    border-bottom: 1px solid #c0d0e6
+}
+
+.pp-table thead .pp-header-table-actions th {
+    color: #293e52;
+    font-size: 14px;
+    padding: 10px 20px
+}
+
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-left: 1px solid #c0d0e6;
+    border-right: 1px solid #c0d0e6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    position: relative
+}
+
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule:before,
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule:after {
+    background: #cdd9eb;
+    content: "";
+    height: 5px;
+    left: -1px;
+    position: absolute;
+    right: -1px
+}
+
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule:before {
+    top: 0
+}
+
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule:after {
+    bottom: 0
+}
+
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule .pp-custom-select {
+    height: 22px;
+    width: 60px
+}
+
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule .pp-custom-select:before {
+    color: #9aaabe;
+    font-size: 8px;
+    right: 15px;
+    top: 7px
+}
+
+.pp-table thead .pp-header-table-actions th.pp-table-has-formule .pp-custom-select select {
+    color: #9aaabe;
+    font: 12px "AvenirDemi", Helvetica, sans-serif;
+    padding: 0 20px 0 5px
+}
+
+.pp-table thead .pp-header-table-actions th:first-child,
+.pp-table thead .pp-header-table-actions th:last-child {
+    position: relative
+}
+
+.pp-table thead .pp-header-table-actions th:first-child:before,
+.pp-table thead .pp-header-table-actions th:first-child:after,
+.pp-table thead .pp-header-table-actions th:last-child:before,
+.pp-table thead .pp-header-table-actions th:last-child:after {
+    background: #cdd9eb;
+    border-bottom: 1px solid #c0d0e6;
+    height: 43px;
+    position: absolute;
+    width: 20px
+}
+
+.pp-table thead .pp-header-table-actions th:first-child:before {
+    border-radius: 3px 0 0 0;
+    content: "";
+    left: -20px;
+    top: 0
+}
+
+.pp-table thead .pp-header-table-actions th:last-child:after {
+    border-radius: 0 3px 0 0;
+    content: "";
+    right: -20px;
+    top: 0
+}
+
+.pp-table tr:not(.pp-header-table-actions) th {
+    cursor: pointer;
+    min-width: 140px;
+    padding: 20px 20px 10px;
+    position: relative;
+    white-space: nowrap
+}
+
+.pp-table tr:not(.pp-header-table-actions) th:after {
+    bottom: 6px;
+    content: "";
+    display: none;
+    font-family: "pipeicons";
+    font-size: 22px;
+    position: absolute;
+    right: 5px
+}
+
+.pp-table tr:not(.pp-header-table-actions) th.sorting_asc:after,
+.pp-table tr:not(.pp-header-table-actions) th.sorting_desc:after,
+.pp-table tr:not(.pp-header-table-actions) th:hover:after {
+    display: block
+}
+
+.pp-table tr:not(.pp-header-table-actions) th.pp-text-right {
+    padding-right: 20px
+}
+
+.pp-table tr:not(.pp-header-table-actions) th [class*="pp-ico"] {
+    bottom: 10px;
+    color: #9aaabe;
+    display: none;
+    font-size: 10px;
+    position: absolute;
+    right: 0
+}
+
+.pp-table tr:not(.pp-header-table-actions) th [class*="pp-ico"]:hover {
+    color: #0081ff
+}
+
+.pp-table tr:not(.pp-header-table-actions) th:hover [class*="pp-ico"] {
+    display: block
+}
+
+.pp-table tbody {
+    border: 1px solid #c0d0e6;
+    height: 100%;
+    margin: 0 20px 20px 20px;
+    overflow: auto
+}
+
+.pp-table tbody.pp-fix-scroll {
+    display: inline-block;
+    height: calc(100vh - 264px);
+    margin: 0;
+    width: 100%
+}
+
+.pp-table tbody tr {
+    border-bottom: 1px solid #c0d0e6
+}
+
+.pp-table tbody tr:hover {
+    background: #e6f2ff;
+    cursor: pointer
+}
+
+.pp-table tbody tr:hover a,
+.pp-table tbody tr:hover td {
+    color: #0081ff
+}
+
+.pp-table tbody tr:hover a:before,
+.pp-table tbody tr:hover a:after,
+.pp-table tbody tr:hover td:before,
+.pp-table tbody tr:hover td:after {
+    background: #e6f2ff
+}
+
+.pp-table tbody td {
+    border-right: 1px solid #c0d0e6;
+    color: #748396;
+    font: 14px "AvenirMedium", Helvetica, sans-serif;
+    padding: 12px 20px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap !important
+}
+
+.pp-table tbody td:last-child {
+    border-right: 0;
+    width: 100%
+}
+
+.pp-table tbody td:last-child:before,
+.pp-table tbody td:last-child:after {
+    left: 0
+}
+
+.pp-table tbody td .pp-label {
+    height: 12px;
+    vertical-align: top;
+    width: 12px
+}
+
+.pp-table tbody td:before,
+.pp-table tbody td:after {
+    background: #fff;
+    content: "";
+    height: 5px;
+    left: 1px;
+    position: absolute;
+    width: 100%
+}
+
+.pp-table tbody td:before {
+    top: 0
+}
+
+.pp-table tbody td:after {
+    bottom: 0
+}
+
+.pp-table th {
+    font-size: 12px;
+    text-align: left;
+    text-transform: uppercase
+}
+
+.loadBox {
+   width:100%; text-align: center;height:300px;line-height: 80px;
+}
+
+
+.padding_20px{ padding-left:20px; }
+
+#btnSalvar{ text-align: left; }
+
+.scroll-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+
+.hidden{ display: none; }

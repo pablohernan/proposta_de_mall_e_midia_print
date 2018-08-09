@@ -1,0 +1,15 @@
+{
+  "name": "Dm Consultoria - Imprimir - Proposta de Locação ",
+  "short_description": "Imprimir - Proposta de Locação com PiPefy",
+  "description": "Imprimir - Proposta de Locação Mall e Mídia",
+  "icon": "./images/icon.png",
+  "author": "DMConsultoria",
+  "init_url": "./",
+  "screenshots": ["./images/screenshots/dm_principal.png"],
+  "features": [
+    "card-buttons",
+    "card-badges",
+    "pipe-buttons",
+    "settings-button"
+  ]
+}

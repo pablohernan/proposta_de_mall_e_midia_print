@@ -1,0 +1,23 @@
+
+
+/* Pablo */
+
+
+.table_100{
+	width: 100%;
+}
+
+.table_100 td{
+	text-align: center;
+}
+
+
+
+.table_3td td:first-child {
+	width: 50%;
+}
+
+
+.td_separador{
+	width: 20px;
+}

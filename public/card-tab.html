@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="https://app.pipefy.com/apps/style.css" />
+    <link rel="stylesheet" media="all" href="./css/style.css?4a" />
+
+    <style>
+      #list {
+        padding-top: 14px;
+        padding-bottom: 10px;
+      }
+      #list a {
+        display:block;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="container">
+
+        <div id="load" class="loadBox">
+            <span class="docs-boxes-link doc-box-3 pp-ico-loading"></span>
+        </div>
+
+        <div id="list" style="display:none">
+
+          <div class="pp-simple-box pp-bg-white">
+             <section>
+               
+                <label class="pp-input-wrap required">
+                <b class="pp-label-text">Shopping</b>      
+                    <div class="pp-custom-select">
+                        <select id="SHOPPING" name="SHOPPING" tabindex="0" class="pp-select save" >
+                        </select>
+                    </div>
+                </label>
+
+                <!--label class="pp-input-wrap">
+                <b class="pp-label-text">Shopping</b>  
+                    <input disabled="disabled" id="SHOPPING_FAKE" name="SHOPPING_FAKE"  type="text" tabindex="0" class="pp-input" value="SHOPPING BOULEVARD BELEM">
+                </label-->      
+
+                <label class="pp-input-wrap required">
+                <b class="pp-label-text">Empresa</b>                
+                    <div class="pp-custom-select">
+                        <select id="EMPRESA_COD" name="EMPRESA_COD" tabindex="0" class="pp-select save">    
+                        </select>
+                    </div>
+                </label>
+                
+                <label class="pp-input-wrap required">
+                <b class="pp-label-text">Tipo de Alteração</b>
+                    <div class="pp-custom-select">
+                        <select id="TIPO_DE_ALTERACAO_DESC" name="TIPO_DE_ALTERACAO_DESC" tabindex="0" class="pp-select save">   
+                            <option value="">::selecione::</option>
+                            <option value="1">Condição</option>
+                            <option value="2">Forma</option>
+                            <option value="3">Vencimento</option>
+                            <option value="4">Pagamento de compras</option>
+                            <option value="5">Classificação de despesa/ Centro de custo</option>
+                            <option value="6">Histórico</option> 
+                        </select>
+                    </div>
+                </label>
+                  
+                <label class="pp-input-wrap">
+                    <b class="pp-label-text">CPF/CNPJ Fornecedor</b> 
+                    <input id="FORNECEDOR_CONSULTA" name="FORNECEDOR_CONSULTA" type="text" tabindex="0" class="pp-input save mask-cpf">
+                    <div class="docs-code-box" id="radios_CPF_CNPJ">
+                        <div class="pp-radio">
+                            <input type="radio" onclick="$('#FORNECEDOR_CONSULTA').mask('000.000.000-00');$('#FORNECEDOR_CONSULTA').attr('placeholder','___.___.___-__');" value="CPF" id="CPF" checked="" name="radio" tabindex="0"><label for="CPF" title="">CPF</label>
+                        </div>
+                        <div class="pp-radio">
+                            <input onclick="$('#FORNECEDOR_CONSULTA').mask('00.000.000/0000-00');$('#FORNECEDOR_CONSULTA').attr('placeholder','__.___.___/____-__');" type="radio" value="CNPJ" id="CNPJ" name="radio" tabindex="0"><label for="CNPJ" title="">CNPJ</label>
+                        </div>
+                    </div>
+                </label>
+                       
+                <label class="pp-input-wrap required">
+                <b class="pp-label-text">Fornecedor</b> 
+                    <div class="pp-custom-select">
+                        <select id="FORNECEDOR_COD" name="FORNECEDOR_COD" tabindex="0" class="pp-select save">    
+                        </select>
+                    </div>                
+                </label>
+                  
+                <label class="pp-input-wrap required">
+                <b class="pp-label-text">Número de Documento</b> 
+                    <div class="pp-custom-select">
+                        <select id="NRO_DO_DOCUMENTO" name="NRO_DO_DOCUMENTO" tabindex="0" class="pp-select save">    
+                        </select>
+                    </div>   
+                </label>
+                      
+                <label class="pp-input-wrap">
+                <b class="pp-label-text">Valor</b>  
+                    <input disabled="disabled" id="VALOR" name="VALOR"  type="text" tabindex="0" class="pp-input save">
+                </label>
+                   
+                <label class="pp-input-wrap required">
+                <b class="pp-label-text">Multa/Juros</b> 
+                    <div class="pp-custom-select">
+                        <select id="MULTA_JUROS_COD" name="MULTA_JUROS_COD" tabindex="0" class="pp-select save">    
+                            <option value="" selected="selected">::selecione::</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>                        
+                        </select>
+                    </div>                   
+                </label>
+                       
+                <label class="pp-input-wrap">
+                <b class="pp-label-text">Valor Multa</b> 
+                    <input id="VALOR_MULTA_JUROS" name="VALOR_MULTA_JUROS" type="text" tabindex="0" class="pp-input save mask-money2">
+                </label>
+                 
+                <label class="pp-input-wrap">
+                <b class="pp-label-text">Vencimento Anterior</b> 
+                    <input disabled="disabled" id="VENCIMENTO_ANTERIOR" name="VENCIMENTO_ANTERIOR"  type="text" tabindex="0" class="pp-input save">                    
+                </label>
+                       
+                <label class="pp-input-wrap required data">
+                    <b class="pp-label-text">Vencimento Novo</b> 
+                    <input id="VENCIMENTO_NOVO" name="VENCIMENTO_NOVO" type="text" tabindex="0" class="pp-input save mask-date">
+                </label>
+                     
+                <label class="pp-input-wrap">
+                <b class="pp-label-text">Condicão de Pagamento</b> 
+                    <div class="pp-custom-select">
+                        <select id="CONDICAO_DE_PAGAMENTO_COD" name="CONDICAO_DE_PAGAMENTO_COD"  tabindex="0" class="pp-select save">    
+                        </select>
+                    </div>                 
+                </label>
+                     
+                <label class="pp-input-wrap">
+                <b class="pp-label-text">Forma de Pagamento</b> 
+                    <div class="pp-custom-select">
+                        <select id="FORMA_DE_PAGAMENTO_COD" name="FORMA_DE_PAGAMENTO_COD" tabindex="0" class="pp-select save">  
+                            <option value="" selected="selected">::selecione::</option>
+                            <option value="Boleto">Boleto</option>
+                            <option value="Depósito">Depósito</option>
+                            <option value="Cheque Administrativo">Cheque Administrativo</option>
+                            <option value="Ordem de Pagamento">Ordem de Pagamento</option>
+                        </select>
+                    </div>
+                </label>
+                   
+                <label class="pp-input-wrap required">
+                    <b class="pp-label-text">Historico</b> 
+                    <input id="HISTORICO" name="HISTORICO" type="text" tabindex="0" class="pp-input save">
+                </label>                   
+
+                <br>
+                <br>
+
+
+                <div class="pp-table-content" id="grid1">   
+                    <br>
+                    <label class="pp-input-wrap required">
+                        <b class="pp-label-text">Grupo de Pagamento</b> 
+                        <div class="pp-custom-select">
+                            <select id="CLASSIFICACAO_DESPESA_COD" name="CLASSIFICACAO_DEPESA_COD" tabindex="0" class="pp-select">    
+                            </select>
+                        </div>
+                    </label>    
+                    <label class="pp-input-wrap required">
+                        <b class="pp-label-text">Centro de Custo</b> 
+                        <div class="pp-custom-select">
+                            <select id="CENTRO_CUSTO_COD" name="CENTRO_CUSTO_COD" tabindex="0" class="pp-select">    
+                            </select>
+                        </div>
+                    </label>    
+                    <label class="pp-input-wrap required">
+                        <b class="pp-label-text">Valor</b> 
+                        <input id="VALOR_GRID" name="VALOR_GRID" type="text" tabindex="0" class="pp-input  mask-money2">            
+                    </label>   
+                    <a href="javascript:addLine()" class="pp-ico-add"> adicionar</a>
+
+                    <div id="accordion"></div>
+
+                </div>
+             </section>
+          </div>
+
+          <br>
+          <p id="btnSalvar">
+            <a href="javascript:close()" class="pp-btn"><span>Salvar</span></a>
+          </p>
+          <br>
+          <br>       
+          <br>
+          <br>                   
+
+        </div>
+    </div>
+    
+    <!-- Pipefy Apps SDK.js -->
+    <script src="https://d1ukdhoxof1oxs.cloudfront.net/pipefy-client.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/pipestyle/3.5.12/assets/stylesheets/platform-apps.css" />   
+    <script src="./js/htmlentities.js?a1a12151454s6a"></script>       
+    <script src="./js/data-base.js?a22s1111aaa54a1aaa1"></script>
+    <script src="./js/grid.js?1a1asa"></script>
+    <script src="./js/mask.js?a11asa"></script>
+    <script src="./js/required.js?a1a1215544aa1454saa6a"></script>
+    <script src="./js/moment.min.js?a1a12155441454aas6a"></script>
+    <script src="./js/valida.js?a1a12155441454saa6a"></script>
+    <script src="./js/card-tab.js?a111asaaa21"></script>  
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>    
+
+
+    
+
+    <!-- LOCAL 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/pipestyle/3.5.12/assets/stylesheets/platform-apps.css" />    
+    <script src="http://localhost/pipefy/forms/start-form-js/public/js/card-tab.js?o"></script>-->
+    <!-- LOCAL -->
+
+  </body>
+</html>
