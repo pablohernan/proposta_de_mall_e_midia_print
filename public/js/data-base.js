@@ -166,3 +166,45 @@ function db_select(callBackFn){
 
 
 
+/* get_fields */
+
+function get_fields(cardId, callBackFn){
+
+  var request = new XMLHttpRequest();
+
+  request.open('POST', 'https://app.pipefy.com/queries');
+
+  request.setRequestHeader('Content-Type', 'application/json');
+  request.setRequestHeader('Authorization', 'Bearer '+apiKey);
+
+  request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      /*
+      console.log('Status:', this.status);
+      console.log('Headers:', this.getAllResponseHeaders());
+      console.log('Body:', this.responseText);
+      */
+
+      callBackFn(ret);
+    }
+  };
+
+  var body = {
+    'query': '{ card(id: '+cardId+') { id fields { name value } } }'
+  };
+
+  request.send(JSON.stringify(body));
+
+}
+
+
+function test(ret){
+  console.log(ret);
+}
+
+
+/* get_fields */
+
+
+
+
