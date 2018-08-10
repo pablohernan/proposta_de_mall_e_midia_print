@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         p.card().then(function(card) {
           console.log('CARD_ID:'+card.id) // { id: '23abc', ... }
           cardId = card.id;
-          get_fields(cardId, test)
+          get_fields(card.internalId, test)
           init();
           console.log(card.current_phase.id);
         });
