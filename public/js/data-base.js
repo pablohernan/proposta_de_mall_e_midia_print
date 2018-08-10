@@ -185,7 +185,7 @@ function get_fields(cardId, callBackFn){
       console.log('Body:', this.responseText);
       */
 
-      callBackFn(ret);
+      callBackFn(this.responseText);
     }
   };
 
