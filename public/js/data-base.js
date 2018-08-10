@@ -168,7 +168,7 @@ function db_select(callBackFn){
 
 /* get_fields */
 
-function get_fields(cardId, callBackFn){
+function db_get_fields(cardId, callBackFn){
 
   var request = new XMLHttpRequest();
 
@@ -185,7 +185,7 @@ function get_fields(cardId, callBackFn){
       console.log('Body:', this.responseText);
       */
 
-      callBackFn(this.responseText);
+      callBackFn( JSON.parse(this.responseText) );
     }
   };
 
