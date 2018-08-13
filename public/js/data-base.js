@@ -201,12 +201,42 @@ function db_get_fields(cardId, callBackFn){
 }
 
 
-function db_get_field(name , fields){
-    for(var i = 0 ; i<fields.length ; i++){
-      if(name == fields[i].name ) 
-        return  fields[i].value; 
+function db_get_field(name , data , childName){
+    
+    if(childName && childName != ''){ // otro pipe relacionado
+
+      var relations = data.card.child_relations;
+      for(var i = 0 ; i<relations.length ; i++){
+        if(childName == relations[i].name ){
+
+          var cards = relations[1].cards;
+          if(cards.length > 0){
+
+            var fields = relations[1].cards[cards.length-1]; // pego o utimo card
+            for(var x = 0 ; x<fields.length ; x++){
+
+              if(name == fields[i].name ) 
+                return  fields[i].value; 
+
+            }
+
+          }
+
+        } 
+
+      }
+
+    }else{
+
+        for(var i = 0 ; i<data.fields.length ; i++){
+          if(name == data.fields[i].name ) 
+            return  data.fields[i].value; 
+        }
+
     }
+
     return '';
+
 }
 
 

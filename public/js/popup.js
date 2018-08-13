@@ -50,7 +50,8 @@ var dataFormat = data.split('-')[2] + '.' + data.split('-')[1] + '.' + data.spli
 $('#data_emissao').html(dataFormat);
 db_get_fields(card.internalId, function(ret){
 
-  var arrFields = ret.data. card.fields;
+  var data = ret.data;
+  var arrFields = data.card.fields;
   var id = ret.data.card.id;
 
   for(var i = 0 ; i<arrFields.length ; i++){
@@ -65,15 +66,15 @@ db_get_fields(card.internalId, function(ret){
   $("[id='id']").val(id);
 
   //Endereço
-  var EnderecoFormat  = db_get_field('Logradouro',arrFields) + ', ' + db_get_field('Número',arrFields) + ', ' + db_get_field('Complemento',arrFields);
+  var EnderecoFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
   $("[id='Endereço']").val(EnderecoFormat); 
 
 
+  //Acrescentar Parecer - Superintendente Comercial.Superintendente Comercial
+  var supComercial = db_get_field('Superintendente Comercial',data,'Acrescentar Parecer - Superintendente Comercial');
+  $("[id='Superintendente Comercial']").val(EnderecoFormat); 
 
 
 })
 
-
-
-	
 }
