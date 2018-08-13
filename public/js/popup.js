@@ -54,9 +54,9 @@ db_get_fields(card.internalId, function(ret){
   var arrFields = ret.data. card.fields;
 
   for(var i = 0 ; i<arrFields.length ; i++){
-    
-    if($('id="'+arrFields+'"').length > 0 )
-      $('id="'+arrFields+'"').val(arrFields.value);
+
+    if($('id="'+arrFields[i].name+'"').length > 0 )
+      $('id="'+arrFields[i].name+'"').val(arrFields[i].value);
 
   }
 
