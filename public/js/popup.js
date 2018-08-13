@@ -72,7 +72,7 @@ db_get_fields(card.internalId, function(ret){
 
   //Acrescentar Parecer - Superintendente Comercial.Superintendente Comercial
   var supComercial = db_get_field('Superintendente Comercial',data,'Acrescentar Parecer - Superintendente Comercial');
-  $("[id='Superintendente Comercial']").val(EnderecoFormat); 
+  $("[id='Superintendente Comercial']").val(supComercial); 
 
 
 })
