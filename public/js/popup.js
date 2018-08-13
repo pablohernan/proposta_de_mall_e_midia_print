@@ -49,9 +49,9 @@ var data = new Date().toJSON().slice(0,10);
 var dataFormat = data.split('-')[2] + '.' + data.split('-')[1] + '.' + data.split('-')[0];
 $('#data_emissao').html(dataFormat);
 db_get_fields(card.internalId, function(ret){
-  alert(ret)
 
   var arrFields = ret.data. card.fields;
+  var id = ret.data.card.id;
 
   for(var i = 0 ; i<arrFields.length ; i++){
 
@@ -59,6 +59,12 @@ db_get_fields(card.internalId, function(ret){
       $("[id='"+arrFields[i].name+"']").val(arrFields[i].value);
 
   }
+
+
+  // id
+  $("[id='id']").val(id)
+
+
 
 
 })
