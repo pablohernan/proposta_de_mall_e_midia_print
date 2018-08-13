@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function init(card,p){
 
-
-$('#data_emissao').html(new Date().toJSON().slice(0,10));
+var data = new Date().toJSON().slice(0,10);
+vra dataFromat = data.split('-')[2] + '.' + data.split('-')[1] + '.' + data.split('-')[0];
+$('#data_emissao').html();
 db_get_fields(card.internalId, function(ret){
   alert(ret)
 })
