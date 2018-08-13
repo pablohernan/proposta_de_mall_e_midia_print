@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           //console.log('CARD_ID:'+card.id) // { id: '23abc', ... }
           //cardId = card.id;
           
-          init();
+          init(card,p);
           //console.log(card.current_phase.id);
         });
      // }catch(e){console.log(e)}
@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-function init(){
+function init(card,p){
 
 
-$('#data_emissao').val(new Date().toJSON().slice(0,10));
+$('#data_emissao').html(new Date().toJSON().slice(0,10));
 db_get_fields(card.internalId, function(ret){
   alert(ret)
 })
