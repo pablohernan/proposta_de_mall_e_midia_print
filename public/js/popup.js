@@ -50,6 +50,17 @@ var dataFormat = data.split('-')[2] + '.' + data.split('-')[1] + '.' + data.spli
 $('#data_emissao').html(dataFormat);
 db_get_fields(card.internalId, function(ret){
   alert(ret)
+
+  var arrFields = ret.data. card.fields;
+
+  for(var i = 0 ; i<arrFields.length ; i++){
+    
+    if($('id="'+arrFields+'"').length > 0 )
+      $('id="'+arrFields+'"').val(arrFields.value);
+
+  }
+
+
 })
 
 
