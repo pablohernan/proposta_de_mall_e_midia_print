@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
 
         p.card().then(function(card) {
-          console.log('CARD_ID:'+card.id) // { id: '23abc', ... }
-          cardId = card.id;
-          db_get_fields(card.internalId, test)
+          //console.log('CARD_ID:'+card.id) // { id: '23abc', ... }
+          //cardId = card.id;
+          
           init();
-          console.log(card.current_phase.id);
+          //console.log(card.current_phase.id);
         });
      // }catch(e){console.log(e)}
 
@@ -44,5 +44,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function init(){
+
+
+$('#data_emissao').val(new Date().toJSON().slice(0,10));
+db_get_fields(card.internalId, function(ret){
+  alert(ret)
+})
+
+
 	
 }
