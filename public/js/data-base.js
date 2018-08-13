@@ -228,9 +228,9 @@ function db_get_field(name , data , childName){
 
     }else{
 
-        for(var i = 0 ; i<data.fields.length ; i++){
-          if(name == data.fields[i].name ) 
-            return  data.fields[i].value; 
+        for(var i = 0 ; i<data.card.fields.length ; i++){
+          if(name == data.card.fields[i].name ) 
+            return  data.card.fields[i].value; 
         }
 
     }
