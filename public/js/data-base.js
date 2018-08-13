@@ -190,8 +190,10 @@ function db_get_fields(cardId, callBackFn){
   };
 
   var body = {
-    'query': '{ card(id: '+cardId+') { id fields { name value } } }'
+    //'query': '{ card(id: '+cardId+') { id fields { name value } } }'
+    'query': '{ card(id: '+cardId+') { id fields { name value } child_relations { cards { id fields { name value } } name source_type } parent_relations { cards { id fields { name value } } name source_type } } }'
   };
+
 
   request.send(JSON.stringify(body));
 
