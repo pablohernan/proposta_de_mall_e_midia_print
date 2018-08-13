@@ -201,8 +201,12 @@ function db_get_fields(cardId, callBackFn){
 }
 
 
-function test(ret){
-  console.log(ret);
+function db_get_field(name , fields){
+    for(var i = 0 ; i<fields.length ; i++){
+      if(name == fields[i].name ) 
+        return  fields[i].value; 
+    }
+    return '';
 }
 
 

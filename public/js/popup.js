@@ -62,12 +62,17 @@ db_get_fields(card.internalId, function(ret){
 
 
   // id
-  $("[id='id']").val(id)
+  $("[id='id']").val(id);
+
+  //Endereço
+  var EnderecoFormat  = db_get_field('Logradouro',arrFields) + ', ' + db_get_field('Número',arrFields) + ', ' + db_get_field('Complemento',arrFields);
+  $("[id='Endereço']").val(EnderecoFormat); 
 
 
 
 
 })
+
 
 
 	
