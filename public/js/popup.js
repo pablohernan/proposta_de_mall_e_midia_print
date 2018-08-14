@@ -19,7 +19,9 @@ if(localVersion){
 var cardId;
 
 document.addEventListener("DOMContentLoaded", function(event) {
-      
+     
+        //debug();
+
      // try{
         p = PipefyApp.init();
         //PipefyApp.resizeTo("#list");
@@ -110,5 +112,5 @@ function debug(){
 
 }
 
-  
+
 
