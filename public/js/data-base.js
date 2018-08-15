@@ -224,11 +224,8 @@ function db_get_field(name , data){
             for(var x = 0 ; x<fields.length ; x++){
 
               if(name == fields[x].name ) 
-                var value = fields[x].value; 
-                value = value.replace('["', "");
-                value = value.replace('"]', "");
-                return  value; 
-
+                return fields[x].value.replace('["', "").replace('"]', ""); 
+s
             }
 
           }
