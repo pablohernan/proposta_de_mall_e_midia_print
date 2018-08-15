@@ -54,7 +54,7 @@ function init(card,p){
 
       var cardId = card.internalId;
       // se tem pai , pego o id do pai para imprimr
-      if(parent.data.card.parent_relation.length > 0 )
+      if(parent.data.card.parent_relations.length > 0 )
         cardId = parent.data.card.parent_relations[0].cards[0].id;
 
       db_get_fields(cardId, function(ret){
