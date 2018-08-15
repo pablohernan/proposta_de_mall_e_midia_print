@@ -165,20 +165,6 @@ function db_select(callBackFn){
 
 
 
-/* get parent */
-
-
-{
-  card(id: 9850102) {
-    id
-    parent_relations {
-      cards {
-        id
-      }
-    }
-  }
-}
-
 /* get parent  */
 
 function db_get_parent(cardId, callBackFn){
@@ -202,11 +188,7 @@ function db_get_parent(cardId, callBackFn){
     }
   };
 
-    //'query': '{ card(id: '+cardId+') { id fields { name value } } }'
-
   var body = {
-    //'query': '{  card(id: '+cardId+') {    id    fields {      name      value    }    child_relations {      cards {        id        phases_history {          firstTimeIn          lastTimeOut          phase {            id            name          }        }        fields {          name          value        }      }      name      source_type    }    parent_relations {      cards {        id        fields {          name          value        }      }      name      source_type    }  }}'
-    //'query': '{ card(id: '+cardId+') { id fields { name value } child_relations { cards { id fields { name value } } name source_type } parent_relations { cards { id fields { name value } } name source_type } } }'
     'query': '{  card(id: '+cardId+') {    id    parent_relations {      cards {        id      }    }  }}'
   
   };
@@ -215,6 +197,7 @@ function db_get_parent(cardId, callBackFn){
   request.send(JSON.stringify(body));
 
 }
+/* get parent  */
 
 
 /* get_fields */
@@ -240,13 +223,8 @@ function db_get_fields(cardId, callBackFn){
     }
   };
 
-    //'query': '{ card(id: '+cardId+') { id fields { name value } } }'
-
   var body = {
-    //'query': '{  card(id: '+cardId+') {    id    fields {      name      value    }    child_relations {      cards {        id        phases_history {          firstTimeIn          lastTimeOut          phase {            id            name          }        }        fields {          name          value        }      }      name      source_type    }    parent_relations {      cards {        id        fields {          name          value        }      }      name      source_type    }  }}'
-    //'query': '{ card(id: '+cardId+') { id fields { name value } child_relations { cards { id fields { name value } } name source_type } parent_relations { cards { id fields { name value } } name source_type } } }'
     'query': '{  card(id: '+cardId+') {    id    finished_at    fields {      name      value    }    child_relations {      cards {        id        finished_at        fields {          name          value        }      }      name      source_type    }  }}'
-  
   };
 
 
@@ -254,8 +232,6 @@ function db_get_fields(cardId, callBackFn){
 
 }
 
-
-/* get field */
 
 function db_get_field(name , data){
     
