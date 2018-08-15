@@ -201,8 +201,15 @@ function db_get_fields(cardId, callBackFn){
 }
 
 
-function db_get_field(name , data , childName){
+function db_get_field(name , data){
     
+    var childName = '';
+    if(name.indexOf('.')>-1){
+      var arrName = name.split('.');
+      childName = arrName[0];
+      name = arrName[1];
+    }
+
     if(childName && childName != ''){ // otro pipe relacionado
 
       var relations = data.card.child_relations;
