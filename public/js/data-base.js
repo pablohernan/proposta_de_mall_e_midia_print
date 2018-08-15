@@ -253,7 +253,7 @@ function db_get_date(name , data){
     
     var relations = data.card.child_relations;
     for(var i = 0 ; i<relations.length ; i++){
-      if(childName == relations[i].name ){
+      if(name == relations[i].name ){
 
         var cards = relations[i].cards;
         if(cards.length > 0){
