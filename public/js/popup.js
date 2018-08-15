@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function init(card,p){
 
-  $('#data_emissao').html(moment().format('MMMM Do YYYY, h:mm:ss a'));
+  $('#data_emissao').html(moment().format('DD.MM.YYYY, h:mm:ss a'));
 
   db_get_fields(card.internalId, function(ret){
 

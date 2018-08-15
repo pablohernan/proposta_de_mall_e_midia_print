@@ -226,7 +226,7 @@ function db_get_field(name , data){
             for(var x = 0 ; x<fields.length ; x++){
 
               if(name == fields[x].name ) 
-                return formatResult(fields[x].value);
+                return formatFieldResult(fields[x].value);
             }
 
           }
@@ -239,7 +239,7 @@ function db_get_field(name , data){
 
         for(var i = 0 ; i<data.card.fields.length ; i++){
           if(name == data.card.fields[i].name ) 
-            return  formatResult(data.card.fields[i].value); 
+            return  formatFieldResult(data.card.fields[i].value); 
         }
 
     }
@@ -254,7 +254,7 @@ function db_get_field(name , data){
 function db_get_date(name , data){
     
     if(name == 'Start form')
-      return data.card.finished_at;
+      return formatDateResult(data.card.finished_at);
 
 
     var relations = data.card.child_relations;
@@ -264,16 +264,8 @@ function db_get_date(name , data){
         var cards = relations[i].cards;
         if(cards.length > 0){
 
-          return cards[cards.length-1].finished_at;
-/*
-          var finished_at = cards[cards.length-1].finished_at; // pego o utimo card
-          for(var x = 0 ; x<phases_history.length ; x++){
+          return formatDateResult(cards[cards.length-1].finished_at);
 
-            if(name == phases_history[x].phase.name ) 
-              return  phases_history[x].lastTimeOut; 
-
-          }
-*/
         }
 
       } 
@@ -288,9 +280,13 @@ function db_get_date(name , data){
 /* get_date */
 
 
-function formatResult(result){
+function formatFieldResult(result){
   return result.replace('["', "").replace('"]', ""); 
 }
+
+function formatDateResult(date){
+  return moment(date).format('DD.MM.YYYY, h:mm:ss a');
+}  
 
 
 
