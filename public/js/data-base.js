@@ -253,6 +253,10 @@ function db_get_field(name , data){
 
 function db_get_date(name , data){
     
+    if(name == 'Start form')
+      return data.card.finished_at;
+
+
     var relations = data.card.child_relations;
     for(var i = 0 ; i<relations.length ; i++){
       if(name == relations[i].name ){
@@ -260,7 +264,7 @@ function db_get_date(name , data){
         var cards = relations[i].cards;
         if(cards.length > 0){
 
-          return cards[cards.length-1].finished_at
+          return cards[cards.length-1].finished_at;
 /*
           var finished_at = cards[cards.length-1].finished_at; // pego o utimo card
           for(var x = 0 ; x<phases_history.length ; x++){

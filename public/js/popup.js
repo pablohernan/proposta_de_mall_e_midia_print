@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function init(card,p){
 
-  var data = new Date().toJSON().slice(0,10);
-  var dataFormat = data.split('-')[2] + '.' + data.split('-')[1] + '.' + data.split('-')[0];
-  $('#data_emissao').html(dataFormat);
+  //var data = new Date().toJSON().slice(0,10);
+  //var dataFormat = data.split('-')[2] + '.' + data.split('-')[1] + '.' + data.split('-')[0];
+  $('#data_emissao').html(moment().format('DD.MM.YYYY'););
   db_get_fields(card.internalId, function(ret){
 
     var data = ret.data;
