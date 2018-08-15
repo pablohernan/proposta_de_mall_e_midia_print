@@ -55,31 +55,16 @@ function init(card,p){
     var data = ret.data;
     var arrFields = data.card.fields;
     var id = ret.data.card.id;
-/*
-    for(var i = 0 ; i<arrFields.length ; i++){
-
-      if($("[id='"+arrFields[i].name+"']").length > 0 )
-        $("[id='"+arrFields[i].name+"']").val(arrFields[i].value);
-
-    }
-
-
-    // id
-    $("[id='id']").val(id);
-
-    //Endereço
-    var EnderecoFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
-    $("[id='Endereço']").val(EnderecoFormat); 
-
-
-    //Acrescentar Parecer - Superintendente Comercial.Superintendente Comercial
-    var supComercial = db_get_field('Superintendente Comercial',data,'Acrescentar Parecer - Superintendente Comercial');
-    $("[id='Superintendente Comercial']").val(supComercial); 
-*/
 
     $( ".save" ).each(function( index ) {
       $( this ).val( db_get_field( $( this ).attr('id') ,data) );
     });
+
+    $("[id='id']").val(id);
+
+    //Endereço
+    var EnderecoFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
+    $("[id='Endereço']").val(EnderecoFormat);     
 
   })
 
