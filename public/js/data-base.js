@@ -224,7 +224,7 @@ function db_get_field(name , data){
             for(var x = 0 ; x<fields.length ; x++){
 
               if(name == fields[x].name ) 
-                return fields[x].value.replace('["', "").replace('"]', ""); 
+                return formatResult(fields[x].value);
             }
 
           }
@@ -237,7 +237,7 @@ function db_get_field(name , data){
 
         for(var i = 0 ; i<data.card.fields.length ; i++){
           if(name == data.card.fields[i].name ) 
-            return  data.card.fields[i].value; 
+            return  formatResult(data.card.fields[i].value); 
         }
 
     }
@@ -278,6 +278,11 @@ function db_get_date(name , data){
 
 
 /* get_date */
+
+
+function formatResult(result){
+  return result.replace('["', "").replace('"]', ""); 
+}
 
 
 
