@@ -222,8 +222,8 @@ function db_get_field(name , data){
             var fields = relations[1].cards[cards.length-1].fields; // pego o utimo card
             for(var x = 0 ; x<fields.length ; x++){
 
-              if(name == fields[i].name ) 
-                return  fields[i].value; 
+              if(name == fields[x].name ) 
+                return  fields[x].value; 
 
             }
 
