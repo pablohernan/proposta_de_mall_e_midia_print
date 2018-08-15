@@ -72,15 +72,15 @@ function init(card,p){
     $("[id='compuesto_Logradouro_Número_Complemento']").val(endFormat);  
 
     //compuesto_Início da Operação_Observações
-    var inicioFormat = db_get_field('Início da Operação',data) + '&#10;' + db_get_field('Observações',data);
+    var inicioFormat = db_get_field('Início da Operação',data) + '<br>' + db_get_field('Observações',data);
     $("[id='compuesto_Início da Operação_Observações']").val(inicioFormat); 
 
     //compuesto_Valor do Aluguel_Observações sobre o valor do aluguel    
-    var aluguelFormat = db_get_field('Valor do Aluguel',data) + '&#10;' + db_get_field('Observações sobre o valor do aluguel',data);
+    var aluguelFormat = db_get_field('Valor do Aluguel',data) + '<br>' + db_get_field('Observações sobre o valor do aluguel',data);
     $("[id='compuesto_Valor do Aluguel_Observações sobre o valor do aluguel']").val(aluguelFormat);         
 
     //compuesto_Valor da Energia_Observações sobre o valor da energia
-    var energiaFormat = db_get_field('Valor da Energia',data) + '&#10;' + db_get_field('Observações sobre o valor da energia',data);
+    var energiaFormat = db_get_field('Valor da Energia',data) + '<br>' + db_get_field('Observações sobre o valor da energia',data);
     $("[id='compuesto_Valor da Energia_Observações sobre o valor da energia']").val(energiaFormat);         
 
 
