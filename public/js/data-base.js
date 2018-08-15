@@ -192,7 +192,7 @@ function db_get_fields(cardId, callBackFn){
     //'query': '{ card(id: '+cardId+') { id fields { name value } } }'
 
   var body = {
-    'query': '{card(id: '+cardId+') {  id  fields {    name    value  }  child_relations {    cards {      id      fields {        name        value      }    }    name    source_type  }    parent_relations {    cards {      id      fields {        name        value      }    }    name    source_type  }  }}'
+    'query': '{  card(id: '+cardId+') {    id    fields {      name      value    }    child_relations {      cards {        id        phases_history {          firstTimeIn          lastTimeOut          phase {            id            name          }        }        fields {          name          value        }      }      name      source_type    }    parent_relations {      cards {        id        fields {          name          value        }      }      name      source_type    }  }}'
     //'query': '{ card(id: '+cardId+') { id fields { name value } child_relations { cards { id fields { name value } } name source_type } parent_relations { cards { id fields { name value } } name source_type } } }'
   };
 
