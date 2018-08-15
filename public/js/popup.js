@@ -60,6 +60,11 @@ function init(card,p){
       $( this ).val( db_get_field( $( this ).attr('id') ,data) );
     });
 
+    $( ".date" ).each(function( index ) {
+      $( this ).val( db_get_date( $( this ).attr('id') ,data) );
+    });
+
+
     $("[id='id']").val(id);
 
     //Endereço

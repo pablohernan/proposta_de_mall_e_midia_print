@@ -247,7 +247,37 @@ function db_get_field(name , data){
 }
 
 
-/* get_fields */
+/* get_date */
+
+function db_get_date(name , data){
+    
+    var relations = data.card.child_relations;
+    for(var i = 0 ; i<relations.length ; i++){
+      if(childName == relations[i].name ){
+
+        var cards = relations[i].cards;
+        if(cards.length > 0){
+
+          var phases_history = cards[cards.length-1].phases_history; // pego o utimo card
+          for(var x = 0 ; x<phases_history.length ; x++){
+
+            if(name == phases_history[x].phase.name ) 
+              return  fields[x].lastTimeOut; 
+
+          }
+
+        }
+
+      } 
+
+    }
+
+    return '';
+
+}
+
+
+/* get_date */
 
 
 
