@@ -1,20 +1,3 @@
-var serverPath = 'https://wiseitcsc.partage.com.br:8445';
-var codEmpreendimento = '1';
-
-
-
-var localVersion = false;
-
-var phase_1 = 2617647; 
-var phase_2 = 2617648;
-var phase_3 = 2617649;
-var phase_4 = 2617650;
-
-var path = '';
-if(localVersion){
- path = 'http://localhost/pipefy/forms/proposta_de_locacao/public';
- showList();
-}
 
 var cardId;
 
