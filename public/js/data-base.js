@@ -192,8 +192,10 @@ function db_get_fields(cardId, callBackFn){
     //'query': '{ card(id: '+cardId+') { id fields { name value } } }'
 
   var body = {
-    'query': '{  card(id: '+cardId+') {    id    fields {      name      value    }    child_relations {      cards {        id        phases_history {          firstTimeIn          lastTimeOut          phase {            id            name          }        }        fields {          name          value        }      }      name      source_type    }    parent_relations {      cards {        id        fields {          name          value        }      }      name      source_type    }  }}'
+    //'query': '{  card(id: '+cardId+') {    id    fields {      name      value    }    child_relations {      cards {        id        phases_history {          firstTimeIn          lastTimeOut          phase {            id            name          }        }        fields {          name          value        }      }      name      source_type    }    parent_relations {      cards {        id        fields {          name          value        }      }      name      source_type    }  }}'
     //'query': '{ card(id: '+cardId+') { id fields { name value } child_relations { cards { id fields { name value } } name source_type } parent_relations { cards { id fields { name value } } name source_type } } }'
+    'query': '{  card(id: '+cardId+') {    id    finished_at    fields {      name      value    }    child_relations {      cards {        id        finished_at        fields {          name          value        }      }      name      source_type    }  }}'
+  
   };
 
 
@@ -258,14 +260,16 @@ function db_get_date(name , data){
         var cards = relations[i].cards;
         if(cards.length > 0){
 
-          var phases_history = cards[cards.length-1].phases_history; // pego o utimo card
+          return cards[cards.length-1].finished_at
+/*
+          var finished_at = cards[cards.length-1].finished_at; // pego o utimo card
           for(var x = 0 ; x<phases_history.length ; x++){
 
             if(name == phases_history[x].phase.name ) 
               return  phases_history[x].lastTimeOut; 
 
           }
-
+*/
         }
 
       } 
