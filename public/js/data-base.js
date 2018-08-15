@@ -263,7 +263,7 @@ function db_get_date(name , data){
           for(var x = 0 ; x<phases_history.length ; x++){
 
             if(name == phases_history[x].phase.name ) 
-              return  fields[x].lastTimeOut; 
+              return  phases_history[x].lastTimeOut; 
 
           }
 
