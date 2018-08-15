@@ -216,10 +216,10 @@ function db_get_field(name , data){
       for(var i = 0 ; i<relations.length ; i++){
         if(childName == relations[i].name ){
 
-          var cards = relations[1].cards;
+          var cards = relations[i].cards;
           if(cards.length > 0){
 
-            var fields = relations[1].cards[cards.length-1].fields; // pego o utimo card
+            var fields = cards[cards.length-1].fields; // pego o utimo card
             for(var x = 0 ; x<fields.length ; x++){
 
               if(name == fields[x].name ) 
