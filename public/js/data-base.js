@@ -165,6 +165,57 @@ function db_select(callBackFn){
 
 
 
+/* get parent */
+
+
+{
+  card(id: 9850102) {
+    id
+    parent_relations {
+      cards {
+        id
+      }
+    }
+  }
+}
+
+/* get parent  */
+
+function db_get_parent(cardId, callBackFn){
+
+  var request = new XMLHttpRequest();
+
+  request.open('POST', 'https://app.pipefy.com/queries');
+
+  request.setRequestHeader('Content-Type', 'application/json');
+  request.setRequestHeader('Authorization', 'Bearer '+apiKey);
+
+  request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      /*
+      console.log('Status:', this.status);
+      console.log('Headers:', this.getAllResponseHeaders());
+      console.log('Body:', this.responseText);
+      */
+
+      callBackFn( JSON.parse(this.responseText) );
+    }
+  };
+
+    //'query': '{ card(id: '+cardId+') { id fields { name value } } }'
+
+  var body = {
+    //'query': '{  card(id: '+cardId+') {    id    fields {      name      value    }    child_relations {      cards {        id        phases_history {          firstTimeIn          lastTimeOut          phase {            id            name          }        }        fields {          name          value        }      }      name      source_type    }    parent_relations {      cards {        id        fields {          name          value        }      }      name      source_type    }  }}'
+    //'query': '{ card(id: '+cardId+') { id fields { name value } child_relations { cards { id fields { name value } } name source_type } parent_relations { cards { id fields { name value } } name source_type } } }'
+    'query': '{  card(id: '+cardId+') {    id    parent_relations {      cards {        id      }    }  }}'
+  
+  };
+
+
+  request.send(JSON.stringify(body));
+
+}
+
 
 /* get_fields */
 
@@ -203,6 +254,8 @@ function db_get_fields(cardId, callBackFn){
 
 }
 
+
+/* get field */
 
 function db_get_field(name , data){
     

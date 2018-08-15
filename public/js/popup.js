@@ -49,41 +49,53 @@ function init(card,p){
 
   $('#data_emissao').html(moment().format('DD.MM.YYYY, h:mm:ss a'));
 
-  db_get_fields(card.internalId, function(ret){
 
-    var data = ret.data;
-    var arrFields = data.card.fields;
-    var id = ret.data.card.id;
+  db_get_parent(card.internalId, function(parent){
 
-    $( ".save" ).each(function( index ) {
-      $( this ).val( db_get_field( $( this ).attr('id') ,data) );
-    });
+      var cardId = card.internalId;
+      // se tem pai , pego o id do pai para imprimr
+      if(parent.data.parent_relations.length > 0 )
+        cardId = parent.data.parent_relations[0].cards[0].id;
 
-    $( ".date" ).each(function( index ) {
-      $( this ).val( db_get_date( $( this ).attr('id') ,data) );
-    });
+      db_get_fields(cardId, function(ret){
 
+        var data = ret.data;
+        var arrFields = data.card.fields;
+        var id = ret.data.card.id;
 
-    $("[id='id']").val(id);
+        $( ".save" ).each(function( index ) {
+          $( this ).val( db_get_field( $( this ).attr('id') ,data) );
+        });
 
-    //compuesto_Logradouro_Número_Complemento
-    var endFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
-    $("[id='compuesto_Logradouro_Número_Complemento']").val(endFormat);  
-
-    //compuesto_Início da Operação_Observações
-    var inicioFormat = db_get_field('Início da Operação',data) + '\n' + db_get_field('Observações',data);
-    $("[id='compuesto_Início da Operação_Observações']").val(inicioFormat); 
-
-    //compuesto_Valor do Aluguel_Observações sobre o valor do aluguel    
-    var aluguelFormat = db_get_field('Valor do Aluguel',data) + '\n' + db_get_field('Observações sobre o valor do aluguel',data);
-    $("[id='compuesto_Valor do Aluguel_Observações sobre o valor do aluguel']").val(aluguelFormat);         
-
-    //compuesto_Valor da Energia_Observações sobre o valor da energia
-    var energiaFormat = db_get_field('Valor da Energia',data) + '\n' + db_get_field('Observações sobre o valor da energia',data);
-    $("[id='compuesto_Valor da Energia_Observações sobre o valor da energia']").val(energiaFormat);         
+        $( ".date" ).each(function( index ) {
+          $( this ).val( db_get_date( $( this ).attr('id') ,data) );
+        });
 
 
-  })
+        $("[id='id']").val(id);
+
+        //compuesto_Logradouro_Número_Complemento
+        var endFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
+        $("[id='compuesto_Logradouro_Número_Complemento']").val(endFormat);  
+
+        //compuesto_Início da Operação_Observações
+        var inicioFormat = db_get_field('Início da Operação',data) + '\n' + db_get_field('Observações',data);
+        $("[id='compuesto_Início da Operação_Observações']").val(inicioFormat); 
+
+        //compuesto_Valor do Aluguel_Observações sobre o valor do aluguel    
+        var aluguelFormat = db_get_field('Valor do Aluguel',data) + '\n' + db_get_field('Observações sobre o valor do aluguel',data);
+        $("[id='compuesto_Valor do Aluguel_Observações sobre o valor do aluguel']").val(aluguelFormat);         
+
+        //compuesto_Valor da Energia_Observações sobre o valor da energia
+        var energiaFormat = db_get_field('Valor da Energia',data) + '\n' + db_get_field('Observações sobre o valor da energia',data);
+        $("[id='compuesto_Valor da Energia_Observações sobre o valor da energia']").val(energiaFormat);         
+
+
+      });
+
+
+
+  });
 
 }
 
