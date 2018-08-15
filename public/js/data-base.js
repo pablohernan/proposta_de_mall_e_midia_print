@@ -219,7 +219,7 @@ function db_get_field(name , data){
           var cards = relations[1].cards;
           if(cards.length > 0){
 
-            var fields = relations[1].cards[cards.length-1]; // pego o utimo card
+            var fields = relations[1].cards[cards.length-1].fields; // pego o utimo card
             for(var x = 0 ; x<fields.length ; x++){
 
               if(name == fields[i].name ) 
