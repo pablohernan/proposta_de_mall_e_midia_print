@@ -225,7 +225,6 @@ function db_get_field(name , data){
 
               if(name == fields[x].name ) 
                 return fields[x].value.replace('["', "").replace('"]', ""); 
-s
             }
 
           }
