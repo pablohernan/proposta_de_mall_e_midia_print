@@ -310,7 +310,7 @@ function db_get_date(name , data){
 
 
 function formatFieldResult(result){
-  return result.replace('["', "").replace('"]', ""); 
+  return result.replace('["', "").replace('"]', "").trim(); 
 }
 
 function formatDateResult(date){
