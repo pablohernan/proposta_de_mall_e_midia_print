@@ -73,6 +73,8 @@ function init(card,p){
         var energiaFormat = db_get_field('Valor da Energia',data) + '\n' + db_get_field('Observações sobre o valor da energia',data);
         $("[id='compuesto_Valor da Energia_Observações sobre o valor da energia']").val(energiaFormat);         
 
+        // resize textareas to content
+        $("textarea").height( $("textarea")[0].scrollHeight );
 
       });
 
