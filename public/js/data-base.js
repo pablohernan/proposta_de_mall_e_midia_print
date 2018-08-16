@@ -314,7 +314,10 @@ function formatFieldResult(result){
 }
 
 function formatDateResult(date){
-  return moment(date).format('DD.MM.YYYY, h:mm:ss a');
+  if(date !== null)
+    return moment(date).format('DD.MM.YYYY, h:mm:ss a');
+  else 
+    return '';
 }  
 
 
