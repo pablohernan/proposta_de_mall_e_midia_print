@@ -74,7 +74,10 @@ function init(card,p){
         $("[id='compuesto_Valor da Energia_Observações sobre o valor da energia']").val(energiaFormat);         
 
         // resize textareas to content
-        $("textarea").height( $("textarea")[0].scrollHeight );
+        $( "textarea" ).each(function( index ) {
+          $( this ).height( $(this)[0].scrollHeight );
+        });        
+
 
       });
 
