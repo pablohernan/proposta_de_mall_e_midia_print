@@ -224,7 +224,7 @@ function db_get_fields(cardId, callBackFn){
   };
 
   var body = {
-    'query': '{  card(id: '+cardId+') {    id    finished_at    fields {      name      value    }    child_relations {      cards {        id        finished_at        fields {          name          value        }      }      name      source_type    }  }}'
+    'query': '{  card(id: '+cardId+') {    id    finished_at     phases_history {      lastTimeOut    }    fields {      name      value    }    child_relations {      cards {        id        finished_at        fields {          name          value        }      }      name      source_type    }  }}'
   };
 
 
@@ -282,8 +282,15 @@ function db_get_field(name , data){
 
 function db_get_date(name , data){
     
-    if(name == 'Start form')
-      return formatDateResult(data.card.finished_at);
+    if(name == 'Start form'){
+      if(data.card.phases_history.length > 1)
+        if(data.card.phases_history[phases_history.length-1].lastTimeOut === null)
+          formatDateResult(data.card.phases_history[phases_history.length-2].lastTimeOut);
+        else
+          formatDateResult(data.card.phases_history[phases_history.length-1].lastTimeOut);
+      else
+        return '';
+    }
 
 
     var relations = data.card.child_relations;
