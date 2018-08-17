@@ -285,9 +285,9 @@ function db_get_date(name , data){
     if(name == 'Start form'){
       if(data.card.phases_history.length > 1)
         if(data.card.phases_history[data.card.phases_history.length-1].lastTimeOut === null)
-          formatDateResult(data.card.phases_history[data.card.phases_history.length-2].lastTimeOut);
+          return formatDateResult(data.card.phases_history[data.card.phases_history.length-2].lastTimeOut);
         else
-          formatDateResult(data.card.phases_history[data.card.phases_history.length-1].lastTimeOut);
+          return formatDateResult(data.card.phases_history[data.card.phases_history.length-1].lastTimeOut);
       else
         return '';
     }
