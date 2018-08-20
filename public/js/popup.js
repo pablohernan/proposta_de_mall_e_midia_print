@@ -51,7 +51,10 @@ function init(card,p){
         });
 
         $( ".date" ).each(function( index ) {
-          $( this ).val( db_get_date( $( this ).attr('id') ,data) );
+          if($( this ).hasAttr('phase'))
+            $( this ).val( db_get_date( $( this ).attr('id') ,data,$( this ).attr('phase')) );
+          else
+            $( this ).val( db_get_date( $( this ).attr('id') ,data) );
         });
 
 

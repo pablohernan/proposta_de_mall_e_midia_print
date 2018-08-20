@@ -280,11 +280,12 @@ function db_get_field(name , data){
 
 /* get_date */
 
-function db_get_date(name , data){
+function db_get_date(name, data, phase){
   
     // regra da DM
     var hist = data.card.phases_history;    
-    if(name == 'Start form'){
+    if(name == 'phase'){
+      /*
       if(hist.length > 2)
         if(hist[hist.length-1].lastTimeOut === null)
           return formatDateResult(hist[hist.length-2].lastTimeOut);
@@ -292,19 +293,18 @@ function db_get_date(name , data){
           return formatDateResult(hist[hist.length-1].lastTimeOut);
       else
         return '';
+      */
+
+      for(var i = 0 ; i<hist.length ; i++){
+        if(name == hist[i].phase.name ){
+            return formatDateResult(hist[i].lastTimeOut);
+        } 
+      }
+
+      return '';
+
     }
 
-    // outros não Start form
-    for(var i = 0 ; i<hist.length ; i++){
-      if(name == hist[i].phase.name ){
-          return formatDateResult(hist[i].lastTimeOut);
-      } 
-
-    }
-
-
-
-/*
     var relations = data.card.child_relations;
     for(var i = 0 ; i<relations.length ; i++){
       if(name == relations[i].name ){
@@ -319,7 +319,7 @@ function db_get_date(name , data){
       } 
 
     }
-*/
+
     return '';
 
 }
