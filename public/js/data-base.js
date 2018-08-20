@@ -296,7 +296,7 @@ function db_get_date(name, data, phase){
       */
 
       for(var i = 0 ; i<hist.length ; i++){
-        if(name == hist[i].phase.name ){
+        if(phase == hist[i].phase.name ){
             return formatDateResult(hist[i].lastTimeOut);
         } 
       }
