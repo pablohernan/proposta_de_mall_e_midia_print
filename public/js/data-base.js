@@ -224,7 +224,7 @@ function db_get_fields(cardId, callBackFn){
   };
 
   var body = {
-    'query': '{  card(id: '+cardId+') {    id    finished_at     phases_history {      lastTimeOut    }    fields {      name      value    }    child_relations {      cards {        id        finished_at        fields {          name          value        }      }      name      source_type    }  }}'
+    'query': '{  card(id: '+cardId+') {    id    finished_at     phases_history {  phase {        id        name      }   lastTimeOut    }    fields {      name      value    }    child_relations {      cards {        id        finished_at        fields {          name          value        }      }      name      source_type    }  }}'
   };
 
 
@@ -281,18 +281,30 @@ function db_get_field(name , data){
 /* get_date */
 
 function db_get_date(name , data){
-    
+  
+    // regra da DM
+    var hist = data.card.phases_history;    
     if(name == 'Start form'){
-      if(data.card.phases_history.length > 1)
-        if(data.card.phases_history[data.card.phases_history.length-1].lastTimeOut === null)
-          return formatDateResult(data.card.phases_history[data.card.phases_history.length-2].lastTimeOut);
+      if(hist.length > 2)
+        if(hist[hist.length-1].lastTimeOut === null)
+          return formatDateResult(hist[hist.length-2].lastTimeOut);
         else
-          return formatDateResult(data.card.phases_history[data.card.phases_history.length-1].lastTimeOut);
+          return formatDateResult(hist[hist.length-1].lastTimeOut);
       else
         return '';
     }
 
+    // outros não Start form
+    for(var i = 0 ; i<hist.length ; i++){
+      if(name == hist[i].phase.name ){
+          return formatDateResult(hist[i].lastTimeOut);
+      } 
 
+    }
+
+
+
+/*
     var relations = data.card.child_relations;
     for(var i = 0 ; i<relations.length ; i++){
       if(name == relations[i].name ){
@@ -307,7 +319,7 @@ function db_get_date(name , data){
       } 
 
     }
-
+*/
     return '';
 
 }
