@@ -51,7 +51,7 @@ function init(card,p){
         });
 
         $( ".date" ).each(function( index ) {
-          if($( this ).hasAttr('phase'))
+          if($( this ).attr('phase'))
             $( this ).val( db_get_date( $( this ).attr('id') ,data,$( this ).attr('phase')) );
           else
             $( this ).val( db_get_date( $( this ).attr('id') ,data) );
