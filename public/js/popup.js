@@ -121,5 +121,11 @@ function debug(){
 
 }
 
+function showList(){
+  $('#load').hide();
+  $('#list').show();
+}
+
+
 
 
