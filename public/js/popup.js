@@ -65,7 +65,7 @@ function init(card,p){
 
         // logo
         if(db_get_field( 'Shopping' ,data) !== '')
-          $("[id='logo']").attr( 'src' , './images/partage/' + db_get_field( 'Shopping' ,data) + '.jpg' );
+          $("[id='logo']").attr( 'src' , './images/partage/' + db_get_field( 'Shopping' ,data) + '.gif' );
 
         //compuesto_Logradouro_Número_Complemento
         var endFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
