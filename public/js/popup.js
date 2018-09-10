@@ -63,13 +63,19 @@ function init(card,p){
         //titulo
         $("[id='titulo']").html( db_get_field( 'Tipo de Proposta' ,data) );
 
+        // logo
+        if(db_get_field( 'Shopping' ,data) !== '')
+          $("[id='logo']").attr( 'src' , './images/partage/' + db_get_field( 'Shopping' ,data) + '.jpg' );
+
         //compuesto_Logradouro_Número_Complemento
         var endFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
         $("[id='compuesto_Logradouro_Número_Complemento']").val(endFormat);  
 
+        /*
         //compuesto_Início da Operação_Observações
         var inicioFormat = db_get_field('Início da Operação',data) + '\n' + db_get_field('Observações',data);
         $("[id='compuesto_Início da Operação_Observações']").val(inicioFormat); 
+        */
 
         //compuesto_Valor do Aluguel_Observações sobre o valor do aluguel    
         var aluguelFormat = db_get_field('Valor do Aluguel',data) + '\n' + db_get_field('Observações sobre o valor do aluguel',data);
