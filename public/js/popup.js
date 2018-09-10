@@ -61,7 +61,7 @@ function init(card,p){
         $("[id='id']").val(id);
 
         //titulo
-        $("[id='titulo']").val( db_get_field( 'Tipo de Proposta' ,data) );
+        $("[id='titulo']").html( db_get_field( 'Tipo de Proposta' ,data) );
 
         //compuesto_Logradouro_Número_Complemento
         var endFormat = db_get_field('Logradouro',data) + ', ' + db_get_field('Número',data) + ', ' + db_get_field('Complemento',data);
