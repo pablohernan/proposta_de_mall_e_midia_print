@@ -77,9 +77,11 @@ function init(card,p){
         $("[id='compuesto_Início da Operação_Observações']").val(inicioFormat); 
         */
 
+        /*
         //compuesto_Valor do Aluguel_Observações sobre o valor do aluguel    
         var aluguelFormat = db_get_field('Valor do Aluguel',data) + '\n' + db_get_field('Observações sobre o valor do aluguel',data);
         $("[id='compuesto_Valor do Aluguel_Observações sobre o valor do aluguel']").val(aluguelFormat);         
+        */
 
         //compuesto_Valor da Energia_Observações sobre o valor da energia
         var energiaFormat = db_get_field('Valor da Energia',data) + '\n' + db_get_field('Observações sobre o valor da energia',data);
