@@ -93,7 +93,8 @@ function init(card,p){
 
         // resize textareas to content
         $( "textarea" ).each(function( index ) {
-          $( this ).height( $(this)[0].scrollHeight - 50 );
+          if($( this ).val() != '')
+            $( this ).height( $(this)[0].scrollHeight );
         });   
 
       });
