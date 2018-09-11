@@ -91,12 +91,7 @@ function init(card,p){
 
         // resize textareas to content
         $( "textarea" ).each(function( index ) {
-          if($( this ).val() == ''){
-            $( this ).height( 20 );
-          }else{
-            $( this ).height( $(this)[0].scrollHeight );
-          }
-          
+          $( this ).height( $(this)[0].scrollHeight );
         });   
 
         showList();     
